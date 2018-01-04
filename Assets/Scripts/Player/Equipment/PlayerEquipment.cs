@@ -7,8 +7,6 @@ public class PlayerEquipment : MonoBehaviour
 
     public static PlayerEquipment instance = null;
 
-    //GUI
-    private IconHolderBehaviour draggingObjIcon;
 
     //Slots
     private PlayerEquipmentSlot weapon, head, torso, boots;

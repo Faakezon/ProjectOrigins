@@ -14,7 +14,6 @@ public class PlayerInventory : MonoBehaviour
     public List<PlayerInventorySlot> inventoryTorsoSlots = new List<PlayerInventorySlot>();
     public List<PlayerInventorySlot> inventoryBootsSlots = new List<PlayerInventorySlot>();
 
-    private IconHolderBehaviour draggingObjIcon;
 
     private List<InventoryItem> itemList = new List<InventoryItem>();
 

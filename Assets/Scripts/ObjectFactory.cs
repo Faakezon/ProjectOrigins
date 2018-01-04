@@ -13,8 +13,6 @@ public class ObjectFactory : MonoBehaviour {
     //JUST FOR PARENTING OF GUI
     public GameObject GUIParent;
 
-    //GUI OBJECTS
-    public GameObject IconHolder;
 
     //GAME OBJECTS
     public GameObject ItemRepresentation;
@@ -24,17 +22,6 @@ public class ObjectFactory : MonoBehaviour {
         instance = this;
 	}
 
-    /// <summary>
-    /// GUI ICON HOLDER FOR DRAGGING ITEMS IN INVENTORY
-    /// </summary>
-    /// <param name="icon"></param>
-    /// <returns>IconHolderBehaviour</returns>
-    public static IconHolderBehaviour CreateIcon(Sprite icon) //CREATE AND PASS PARAMETER TO CONSTRUCTOR FOR THE OBJECT SCRIPT
-    {
-        IconHolderBehaviour iconHolder = Instantiate(ObjectFactory.instance.IconHolder, Input.mousePosition, Quaternion.identity, ObjectFactory.instance.GUIParent.transform).GetComponent<IconHolderBehaviour>();
-        iconHolder.Initialize(icon);
-        return iconHolder;
-    }
 
     /// <summary>
     /// For debugging purposes...
