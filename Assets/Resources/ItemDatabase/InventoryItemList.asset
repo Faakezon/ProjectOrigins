@@ -12,13 +12,12 @@ MonoBehaviour:
   m_Name: InventoryItemList
   m_EditorClassIdentifier: 
   itemList:
-  - itemName: DerpGun
+  - itemName: DERP GUN
     itemID: 0
     slotname: 
-    itemDescription: Just your regular derpgun
+    itemDescription: FUUUCK
     itemIcon: {fileID: 21300210, guid: 761315cdb974ba44ebe2828d5b73ffc2, type: 3}
-    itemObject: {fileID: 1803986207941694, guid: c4f3c08b36f4c3b47b07c45576c87e4f,
-      type: 2}
+    itemObject: {fileID: 0}
     isUnique: 0
     isIndestructible: 0
     isQuestItem: 0
@@ -28,10 +27,10 @@ MonoBehaviour:
     itemType: 0
     armorType: 0
     HPRecovery: 0
-  - itemName: DerpHeadGear
+  - itemName: DERP HEAD
     itemID: 1
     slotname: 
-    itemDescription: Just your regular derp armor
+    itemDescription: FUCK
     itemIcon: {fileID: 21300378, guid: 761315cdb974ba44ebe2828d5b73ffc2, type: 3}
     itemObject: {fileID: 0}
     isUnique: 0
@@ -43,10 +42,10 @@ MonoBehaviour:
     itemType: 1
     armorType: 0
     HPRecovery: 0
-  - itemName: DerpTorso
+  - itemName: DERP TORSO
     itemID: 2
     slotname: 
-    itemDescription: Regular derp derp fuck this
+    itemDescription: FUCKELIFUCK
     itemIcon: {fileID: 21300364, guid: 761315cdb974ba44ebe2828d5b73ffc2, type: 3}
     itemObject: {fileID: 0}
     isUnique: 0
@@ -58,10 +57,10 @@ MonoBehaviour:
     itemType: 1
     armorType: 1
     HPRecovery: 0
-  - itemName: DerpBoots
+  - itemName: DERP BOOTS
     itemID: 3
     slotname: 
-    itemDescription: FUUUUCK
+    itemDescription: FUCKELIFUCKFUCK
     itemIcon: {fileID: 21300392, guid: 761315cdb974ba44ebe2828d5b73ffc2, type: 3}
     itemObject: {fileID: 0}
     isUnique: 0
@@ -76,7 +75,7 @@ MonoBehaviour:
   - itemName: GUNX
     itemID: 4
     slotname: 
-    itemDescription: Better than derp
+    itemDescription: FUCKELIFUCKFUCKFUCK
     itemIcon: {fileID: 21300208, guid: 761315cdb974ba44ebe2828d5b73ffc2, type: 3}
     itemObject: {fileID: 0}
     isUnique: 0
