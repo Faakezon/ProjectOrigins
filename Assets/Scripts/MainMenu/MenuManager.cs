@@ -131,7 +131,7 @@ public class MenuManager : MonoBehaviour {
 
     public void LogIn()
     {
-        SceneMng.instance.LoadScene("PlanetExplorer");
+        SceneHandler.instance.LoadScene("PlanetExplorer");
     }
 
 }

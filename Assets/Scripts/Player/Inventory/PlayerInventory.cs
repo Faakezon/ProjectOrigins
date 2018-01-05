@@ -39,7 +39,7 @@ public class PlayerInventory : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        if (SceneMng.instance.IsSceneActive("InventoryScreen"))
+        if (SceneHandler.instance.IsSceneActive("InventoryScreen"))
             {
             //DEBUG UPDATE, TO BE REMOVED
             //GET ITEMS
@@ -47,71 +47,21 @@ public class PlayerInventory : MonoBehaviour
             {
                 AddItem(ObjectFactory.CreateWeaponItemInInventory());
             }
-            if (Input.GetKeyDown(KeyCode.Y))
+            if (Input.GetKeyDown(KeyCode.W))
             {
                 AddItem(ObjectFactory.CreateBetterWeaponItemInInventory());
             }
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 AddItem(ObjectFactory.CreateHeadItemInInventory());
             }
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.R))
             {
                 AddItem(ObjectFactory.CreateTorsoItemInInventory());
             }
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.T))
             {
                 AddItem(ObjectFactory.CreateBootsItemInInventory());
-            }
-
-
-
-            //EQUIP ITEMS
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                if (inventoryWeaponSlots[0].Item != null)
-                {
-                    UseItem(inventoryWeaponSlots[0], inventoryWeaponSlots[0].Item);
-                }
-            }
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                if (inventoryHeadSlots[0].Item != null)
-                {
-                    UseItem(inventoryHeadSlots[0], inventoryHeadSlots[0].Item);
-                }
-            }
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                if (inventoryTorsoSlots[0].Item != null)
-                {
-                    UseItem(inventoryTorsoSlots[0], inventoryTorsoSlots[0].Item);
-                }
-            }
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                if (inventoryBootsSlots[0].Item != null)
-                {
-                    UseItem(inventoryBootsSlots[0], inventoryBootsSlots[0].Item);
-                }
-            }
-
-            //UNEQUIP ITEMS
-            if (Input.GetKeyDown(KeyCode.Z))
-            {
-                PlayerEquipment.instance.UnEquipWeapon();
-            }
-
-            //CLEAR ALL ITEMS
-            if (Input.GetKeyDown(KeyCode.M))
-            {
-                foreach (PlayerInventorySlot slot in inventoryWeaponSlots)
-                {
-                    if (slot.Item != null)
-                    {
-                        RemoveItem(slot, slot.Item);
-                    }
-                }
             }
         }
     }
@@ -120,7 +70,7 @@ public class PlayerInventory : MonoBehaviour
     {
         ClearLists();
 
-        if (SceneMng.instance.GetCurrentScenes()[1].name == "InventoryScreen")
+        if (SceneHandler.instance.GetCurrentScenes()[1].name == "InventoryScreen")
         {
             Debug.Log("Instantiate Inventory");
             if (
@@ -358,42 +308,7 @@ public class PlayerInventory : MonoBehaviour
 
         return false;
     }
-    //public bool AddItem(InventoryItem item, PlayerInventorySlot slot)
-    //{
-    //    switch (item.itemType)
-    //    {
-    //        case InventoryItem.ItemType.Weapon:
-    //            AddWeapon(item);
-    //            break;
-    //        case InventoryItem.ItemType.Armor:
-    //            switch (item.armorType)
-    //            {
-    //                case InventoryItem.ArmorType.Head:
-    //                    AddHead(item);
-    //                    break;
-    //                case InventoryItem.ArmorType.Torso:
-    //                    AddTorso(item);
-    //                    break;
-    //                case InventoryItem.ArmorType.Boots:
-    //                    AddBoots(item);
-    //                    break;
-    //                default:
-    //                    break;
-    //            }
-    //            break;
 
-
-    //        case InventoryItem.ItemType.Consumable:
-    //            break;
-    //        case InventoryItem.ItemType.Material:
-    //            break;
-    //        case InventoryItem.ItemType.QuestItem:
-    //            break;
-    //        default:
-    //            break;
-    //    }
-    //    return false;
-    //}
 
     private bool AddWeapon(InventoryItem item)
     {
@@ -608,7 +523,7 @@ public class PlayerInventory : MonoBehaviour
     /// <summary>
     /// EQUIP
     /// </summary>
-    ///First are only for beginner equipment
+    ///These are only for beginner equipment
     private void EquipWeapon(InventoryItem item)
     {
         PlayerEquipment.instance.EquipWeapon(item);

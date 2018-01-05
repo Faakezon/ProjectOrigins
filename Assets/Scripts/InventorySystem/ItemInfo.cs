@@ -111,47 +111,58 @@ public class ItemInfo : MonoBehaviour {
 
     private static void InventoryPos(PlayerInventorySlot inventory)
     {
-        Vector3 vector = Camera.main.WorldToScreenPoint(CameraPointer.instance.reticlePosition.position);
+        
+        Vector3 vector = Camera.main.ScreenToViewportPoint(CameraPointer.instance.reticlePosition.position);
+        Vector3 inventoryVector = Camera.main.ScreenToViewportPoint(inventory.transform.position);
+        //itemInfo.transform.position = Camera.main.ViewportToScreenPoint(inventoryVector);
 
-        if (vector.x < Screen.width / 2) //LEFT SIDE OF THE SCREEN
+        if (vector.x < 0.5F)
         {
-            itemInfo.transform.localPosition = new Vector3(
-            inventory.transform.position.x + (itemInfo.GetComponent<RectTransform>().rect.width / 2),
-            inventory.transform.position.y + (itemInfo.GetComponent<RectTransform>().rect.height / 2),
-            0);
+            Debug.Log(vector + " Left Side");
 
-            itemInfo.transform.localPosition += CameraPointer.instance.reticlePosition.localPosition * 10;
+            Vector3 addedPos = Camera.main.ScreenToViewportPoint(new Vector3(
+                inventory.transform.position.x + (itemInfo.GetComponent<RectTransform>().rect.width / 2),
+                inventory.transform.position.y + (itemInfo.GetComponent<RectTransform>().rect.height / 2),
+                0));
+            itemInfo.transform.position = Camera.main.ViewportToScreenPoint(addedPos) + vector * 10;
+
         }
-        else //RIGHT SIDE OF THE SCREEN
+        else
         {
-            itemInfo.transform.localPosition = new Vector3(
+            Debug.Log(vector + " Right Side");
+            Vector3 addedPos = Camera.main.ScreenToViewportPoint(new Vector3(
                 inventory.transform.position.x - (itemInfo.GetComponent<RectTransform>().rect.width / 2),
                 inventory.transform.position.y + (itemInfo.GetComponent<RectTransform>().rect.height / 2),
-                0);
-
-            itemInfo.transform.localPosition += CameraPointer.instance.reticlePosition.localPosition * 10;
+                0));
+            itemInfo.transform.position = Camera.main.ViewportToScreenPoint(addedPos) + vector * 10;
         }
     }
 
     private static void EquipmentPos(PlayerEquipmentSlot equipment)
     {
-        Vector3 vector = Camera.main.WorldToScreenPoint(CameraPointer.instance.reticlePosition.position);
+        Vector3 vector = Camera.main.ScreenToViewportPoint(CameraPointer.instance.reticlePosition.position);
+        Vector3 inventoryVector = Camera.main.ScreenToViewportPoint(equipment.transform.position);
+        //itemInfo.transform.position = Camera.main.ViewportToScreenPoint(inventoryVector);
 
-        if (vector.x < Screen.width / 2) //LEFT SIDE OF THE SCREEN
+        if (vector.x < 0.5F)
         {
-            itemInfo.transform.localPosition = new Vector3(
+            Debug.Log(vector + " Left Side");
+
+            Vector3 addedPos = Camera.main.ScreenToViewportPoint(new Vector3(
                 equipment.transform.position.x + (itemInfo.GetComponent<RectTransform>().rect.width / 2),
                 equipment.transform.position.y + (itemInfo.GetComponent<RectTransform>().rect.height / 2),
-                0);
-            itemInfo.transform.localPosition += CameraPointer.instance.reticlePosition.localPosition * 10;
+                0));
+            itemInfo.transform.position = Camera.main.ViewportToScreenPoint(addedPos) + vector * 10;
+
         }
-        else //RIGHT SIDE OF THE SCREEN
+        else
         {
-            itemInfo.transform.localPosition = new Vector3(
+            Debug.Log(vector + " Right Side");
+            Vector3 addedPos = Camera.main.ScreenToViewportPoint(new Vector3(
                 equipment.transform.position.x - (itemInfo.GetComponent<RectTransform>().rect.width / 2),
                 equipment.transform.position.y + (itemInfo.GetComponent<RectTransform>().rect.height / 2),
-                0);
-            itemInfo.transform.localPosition += CameraPointer.instance.reticlePosition.localPosition * 10;
+                0));
+            itemInfo.transform.position = Camera.main.ViewportToScreenPoint(addedPos) + vector * 10;
         }
     }
 

@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class SceneMng : MonoBehaviour {
+public class SceneHandler : MonoBehaviour {
 
-    public static SceneMng instance = null;
+    public static SceneHandler instance = null;
     //public Slider loadingBar;
     private AsyncOperation async;
     private string _nextScene;
@@ -70,9 +70,9 @@ public class SceneMng : MonoBehaviour {
 
     public void ToggleInventory()
     {
-        if (SceneMng.instance.IsSceneActive("InventoryScreen"))
+        if (SceneHandler.instance.IsSceneActive("InventoryScreen"))
         {
-            SceneManager.LoadSceneAsync("PlanetExplorer", LoadSceneMode.Additive); //REMOVE
+            //SceneManager.LoadSceneAsync("PlanetExplorer", LoadSceneMode.Additive); //REMOVE
             StartCoroutine("UnloadInventoryScreen");
         }
         else
@@ -94,7 +94,7 @@ public class SceneMng : MonoBehaviour {
         StartCoroutine(LoadLevelWithBar(level));
     }
 
-    private bool GetLoadedPlayerData()
+    private bool GetSavedPlayerData()
     {
         pData = DataController.instance.GetSavedPlayerData();
         if (pData != null)
@@ -116,13 +116,13 @@ public class SceneMng : MonoBehaviour {
         yield return new WaitUntil(() => PlayerInventory.instance.InstantiateInventory());
 
         //Fetch saved data.
-        yield return new WaitUntil(() => GetLoadedPlayerData());
+        yield return new WaitUntil(() => GetSavedPlayerData());
         Debug.Log("Beginner: " + pData.newlyCreatedCharacter);
         //Load saved data into Equipment and Inventory
         yield return new WaitUntil(() => PlayerEquipment.instance.LoadEquipmentData(pData));
         yield return new WaitUntil(() => PlayerInventory.instance.LoadInventoryData(pData));
 
-        SceneManager.UnloadSceneAsync("PlanetExplorer"); //REMOVE
+        //SceneManager.UnloadSceneAsync("PlanetExplorer"); //REMOVE
     }
 
     IEnumerator UnloadInventoryScreen()

@@ -103,7 +103,7 @@ public class InputHandler : MonoBehaviour {
         if(MenuManager.currentState == MenuManager.MenuState.LogoScreen)
             SetCurrentState(GameState.MainMenu);
 
-        if (SceneMng.instance.GetCurrentScene().name == "PlanetExplorer")
+        if (SceneHandler.instance.GetCurrentScene().name == "PlanetExplorer")
             SetCurrentState(GameState.PlanetExplorer);
     }
 
@@ -111,7 +111,7 @@ public class InputHandler : MonoBehaviour {
     {
         if (Input.GetButtonDown("Start"))
         {
-            SceneMng.instance.ToggleInventory();
+            SceneHandler.instance.ToggleInventory();
             
         }
     }
@@ -121,9 +121,9 @@ public class InputHandler : MonoBehaviour {
         
         if (Input.GetButtonDown("Start"))
         {
-            SceneMng.instance.ToggleInventory();
+            SceneHandler.instance.ToggleInventory();
         }
-        if (SceneMng.instance.IsSceneActive("InventoryScreen"))
+        if (SceneHandler.instance.IsSceneActive("InventoryScreen"))
         {
             MainCameraRef.instance.SetReticuleActive(true);
         }

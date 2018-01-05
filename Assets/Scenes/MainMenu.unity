@@ -3758,6 +3758,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1124525453582690, guid: d16c00681bacb8442a4f75757f45e405, type: 2}
+      propertyPath: m_Name
+      value: SceneHandler
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d16c00681bacb8442a4f75757f45e405, type: 2}
   m_IsPrefabParent: 0
@@ -5237,6 +5241,11 @@ Prefab:
         type: 2}
       propertyPath: randomSeed
       value: 1620831643
+      objectReference: {fileID: 0}
+    - target: {fileID: 223619664094200306, guid: 957d7b744c78d864c88cf79defb4e2df,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 957d7b744c78d864c88cf79defb4e2df, type: 2}

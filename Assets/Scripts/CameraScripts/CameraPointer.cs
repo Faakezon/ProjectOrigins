@@ -28,39 +28,39 @@ public class CameraPointer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // TODO: Replace with reticle screen position
-        
-
+        Vector3 reticuleWorldPos = Camera.main.ScreenToWorldPoint(reticlePosition.position);
+       
         // Raycast variables
         RaycastHit hit;
-        
-
-        // Raycast
-        if (Physics.Raycast(Camera.main.transform.position, reticlePosition.position - Camera.main.transform.position, out hit))
+        if (!SceneHandler.instance.IsSceneActive("InventoryScreen"))
         {
-            
-            if (hit.transform.gameObject != null)
+            // Raycast
+            if (Physics.Raycast(Camera.main.transform.position, reticuleWorldPos - Camera.main.transform.position, out hit))
             {
-                hitObject = hit.transform.gameObject;
-                //Debug.Log("RAYHIT: " + hitObject.name);
-                hitObject.SendMessage("OnReticleEnter", SendMessageOptions.DontRequireReceiver); // Trigger "OnReticleEnter"
+
+                if (hit.transform.gameObject != null)
+                {
+                    hitObject = hit.transform.gameObject;
+                    //Debug.Log("RAYHIT: " + hitObject.name);
+                    hitObject.SendMessage("OnReticleEnter", SendMessageOptions.DontRequireReceiver); // Trigger "OnReticleEnter"
+
+                }
+                else
+                {
+                    hitObject.SendMessage("OnReticleHover", SendMessageOptions.DontRequireReceiver); // Trigger "OnReticleHover"
+                }
 
             }
             else
             {
-                hitObject.SendMessage("OnReticleHover", SendMessageOptions.DontRequireReceiver); // Trigger "OnReticleHover"
+                if (hitObject != null)
+                {
+                    hitObject.SendMessage("OnReticleExit", SendMessageOptions.DontRequireReceiver); // Trigger "OnReticleExit"
+                }
+                hitObject = null;
             }
-
         }
-        else
-        {
-            if (hitObject != null)
-            {
-                hitObject.SendMessage("OnReticleExit", SendMessageOptions.DontRequireReceiver); // Trigger "OnReticleExit"
-            }
-            hitObject = null;
-        }
-
-
     }
+
+
 }

@@ -112,6 +112,20 @@ public class PlayerEquipmentSlot : MonoBehaviour {
     {
         Invoke("OnMouseOver", 0);
     }
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.gameObject.name == "Reticule")
+        {
+            OnReticleEnter();
+        } 
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name == "Reticule")
+        {
+            OnReticleExit();
+        }
+    }
 
 
     public void Reset()
