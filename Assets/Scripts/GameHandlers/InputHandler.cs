@@ -86,7 +86,7 @@ public class InputHandler : MonoBehaviour {
 
     void MainMenuController()
     {
-        if (Input.GetButtonDown("Start"))
+        if (Input.GetButtonDown("Start") || Input.GetButtonDown("XboxA"))
         {
             Debug.Log("START");
             SetCurrentState(GameState.CharacterScreen);
@@ -112,7 +112,8 @@ public class InputHandler : MonoBehaviour {
         if (Input.GetButtonDown("Start"))
         {
             SceneHandler.instance.ToggleInventory();
-            
+            MainCameraRef.instance.GlitchAttack();
+
         }
     }
 

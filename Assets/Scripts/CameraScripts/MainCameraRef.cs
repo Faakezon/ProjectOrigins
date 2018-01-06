@@ -9,8 +9,8 @@ public class MainCameraRef : MonoBehaviour {
 
     private Animator animator;
     private PostProcessingBehaviour ppb;
-    
 
+    private Kino.AnalogGlitch glitch;
 
     public PostProcessingProfile[] ppbProfile;
     private ReticuleBehaviour reticuleBehaviour;
@@ -31,6 +31,7 @@ public class MainCameraRef : MonoBehaviour {
         animator = instance.GetComponent<Animator>();
         ppb = instance.GetComponent<PostProcessingBehaviour>();
         reticuleBehaviour = instance.GetComponentInChildren<ReticuleBehaviour>();
+        glitch = instance.GetComponent<Kino.AnalogGlitch>();
     }
 
     public void SetCameraStaticPos()
@@ -38,8 +39,10 @@ public class MainCameraRef : MonoBehaviour {
         switch (InputHandler.currentState)  
         {
             case InputHandler.GameState.MainMenu:
+                ResizeGlitchEffect();
                 break;
             case InputHandler.GameState.CharacterScreen:
+                StopGlitchEffects();
                 break;
             case InputHandler.GameState.PlanetExplorer:
                 animator.SetBool("CharacterScreen", false);
@@ -55,11 +58,66 @@ public class MainCameraRef : MonoBehaviour {
         }
 
     }
+    void Update()
+    {
+        if (InputHandler.currentState == InputHandler.GameState.PlanetExplorer || InputHandler.currentState == InputHandler.GameState.Planet)
+        {
+            if(InputHandler.currentState == InputHandler.GameState.PlanetExplorer)
+                glitch.scanLineJitter = 0.2f;
+            else
+            {
+                glitch.scanLineJitter = 0.0f;
+            }
 
+            if (glitch.colorDrift > 0)
+            {
+                glitch.colorDrift -= (1.0f * Time.deltaTime);
+            }
+        }
+    }
     public void SetReticuleActive(bool active)
     {
         Debug.Log("Reticule Active: " + active);
         reticuleBehaviour.GetComponent<RectTransform>().gameObject.SetActive(active);
+    }
+
+    private void ResizeGlitchEffect()
+    {
+        if(glitch.scanLineJitter > 0.3)
+        {
+            glitch.scanLineJitter -= 0.3f * Time.deltaTime;
+        }
+        else
+        {
+            glitch.scanLineJitter = 0.3f;
+        }
+        if(glitch.colorDrift > 0.05)
+        {
+            glitch.colorDrift -= 0.3f * Time.deltaTime;
+        }
+        else
+        {
+            glitch.colorDrift = 0.05f;
+        }
+    }
+    private void StopGlitchEffects()
+    {
+        if (glitch.scanLineJitter > 0)
+        {
+            glitch.scanLineJitter -= (0.4f * Time.deltaTime);
+        }
+        if (glitch.colorDrift > 0)
+        {
+            glitch.colorDrift -= (0.4f * Time.deltaTime);
+        }
+    }
+
+    public void GlitchAttack()
+    {
+        Debug.Log("Derp");
+        glitch.colorDrift = 1.0f;
+        glitch.colorDrift = 0.5f;
+        
     }
 
 }

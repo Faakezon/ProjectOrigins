@@ -39,7 +39,7 @@ public class PlanetSelector : MonoBehaviour {
             {
                 SceneHandler.instance.LoadScene(PlanetInfoBox_Name.text);
             }
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("XboxA"))
             {
                 Debug.Log("SelectedPlanet: " + PlanetInfoBox_Name.text);
                 SceneHandler.instance.LoadScene(PlanetInfoBox_Name.text);
