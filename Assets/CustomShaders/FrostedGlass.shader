@@ -136,7 +136,7 @@ Shader "FrostedGlass"
                      sum += GRABXYPIXEL(0.0, 0.0);
                      int measurments = 1;
   
-                     for (float range = 1.41421356237f; range <= radius * 1.41; range += 1.41421356237f)
+                     [unroll(121)]for (float range = 1.41421356237f; range <= radius * 1.41; range += 1.41421356237f)
                      {
                          sum += GRABXYPIXEL(range, 0);
                          sum += GRABXYPIXEL(-range, 0);
