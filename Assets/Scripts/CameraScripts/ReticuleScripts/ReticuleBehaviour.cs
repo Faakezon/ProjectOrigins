@@ -9,7 +9,9 @@ public class ReticuleBehaviour : MonoBehaviour {
 
     private Transform reticle;
     private float reticuleSpeed = 10.0f;
-    private GameObject hitObject = null;
+
+    private GameObject hitObjectScreenPos = null;
+    private GameObject hitObjectWorldPos = null;
 
     public Vector2 startPos;
 
@@ -39,10 +41,8 @@ public class ReticuleBehaviour : MonoBehaviour {
 
     void Update () {
         ReticuleMovement();
-        ReticuleHitDetection();
-        
+        ReticleHitDetectionUpdate();
     }
-
 
     void ReticuleMovement()
     {
@@ -55,62 +55,81 @@ public class ReticuleBehaviour : MonoBehaviour {
         transform.Translate(movementVector);
     }
 
-/// <summary>
-/// Works for both overlay UI elements and world positioned elements. 
-/// </summary>
+    void ReticleHitDetectionUpdate()
+    {
+        ReticuleHitDetection();
+        ReticuleHitDetectionWorldPos();
+    }
+
+    /// <summary>
+    /// Different raycasts for screen positioned elements and world positioned elements. 
+    /// </summary>
     void ReticuleHitDetection()
     {
         // Raycast variables
         RaycastHit hit;
         Vector3 reticuleWorldPos = Camera.main.ScreenToWorldPoint(reticle.position);
-        Debug.Log(reticuleWorldPos);
-        if (!SceneHandler.instance.IsSceneActive("InventoryScreen"))
+
+        // Raycast SCREENPOS
+        if (Physics.Raycast(Camera.main.transform.position, reticle.position - Camera.main.transform.position, out hit))
         {
-            // Raycast SCREENPOS
-            if (Physics.Raycast(Camera.main.transform.position, reticle.position - Camera.main.transform.position, out hit))
+
+            if (hit.transform.gameObject != null)
             {
-
-                if (hit.transform.gameObject != null)
-                {
-                    hitObject = hit.transform.gameObject;
-                    hitObject.SendMessage("OnReticleEnter", SendMessageOptions.DontRequireReceiver); // Trigger "OnReticleEnter"
-
-                }
-                else
-                {
-                    hitObject.SendMessage("OnReticleHover", SendMessageOptions.DontRequireReceiver); // Trigger "OnReticleHover"
-                }
-
-            }else         
-            // Raycast WORLDPOS
-            if (Physics.Raycast(Camera.main.transform.position, reticuleWorldPos - Camera.main.transform.position, out hit))
-            {
-                Debug.DrawRay(Camera.main.transform.position, reticuleWorldPos - Camera.main.transform.position);
-                if (hit.transform.gameObject != null)
-                {
-                    hitObject = hit.transform.gameObject;
-                    hitObject.SendMessage("OnReticleEnter", SendMessageOptions.DontRequireReceiver); // Trigger "OnReticleEnter"
-
-                }
-                else
-                {
-                    //hitObject.SendMessage("OnReticleHover", SendMessageOptions.DontRequireReceiver); // Trigger "OnReticleHover"
-                }
+                hitObjectScreenPos = hit.transform.gameObject;
+                hitObjectScreenPos.SendMessage("OnReticleEnter", SendMessageOptions.DontRequireReceiver); // Trigger "OnReticleEnter"
 
             }
             else
             {
-                if (hitObject != null)
+                hitObjectScreenPos.SendMessage("OnReticleHover", SendMessageOptions.DontRequireReceiver); // Trigger "OnReticleHover"
+            }
+        }
+        else
+        {
+            if (hitObjectScreenPos != null)
+            {
+                hitObjectScreenPos.SendMessage("OnReticleExit", SendMessageOptions.DontRequireReceiver); // Trigger "OnReticleExit"
+            }
+            hitObjectScreenPos = null;
+        }
+    }
+    void ReticuleHitDetectionWorldPos()
+    {
+        if (!SceneHandler.instance.IsSceneActive("InventoryScreen"))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(reticle.position);
+            RaycastHit hit;
+
+            // Raycast
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hitObjectWorldPos != hit.transform.gameObject)
                 {
-                    hitObject.SendMessage("OnReticleExit", SendMessageOptions.DontRequireReceiver); // Trigger "OnReticleExit"
+                    if (hitObjectWorldPos != null)
+                    {
+                        hitObjectWorldPos.SendMessage("OnReticleExit"); // Trigger "OnReticleExit"
+                    }
+                    hitObjectWorldPos = hit.transform.gameObject;
+                    hitObjectWorldPos.SendMessage("OnReticleEnter"); // Trigger "OnReticleEnter"
                 }
-                hitObject = null;
+                else
+                {
+                    hitObjectWorldPos.SendMessage("OnReticleHover"); // Trigger "OnReticleHover"
+                }
+            }
+            else
+            {
+                if (hitObjectWorldPos != null)
+                {
+                    hitObjectWorldPos.SendMessage("OnReticleExit"); // Trigger "OnReticleExit"
+                }
+                hitObjectWorldPos = null;
             }
         }
     }
 
 
-    
 
 }
 

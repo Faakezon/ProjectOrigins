@@ -5817,41 +5817,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 20998750522896772, guid: 957d7b744c78d864c88cf79defb4e2df,
-        type: 2}
-      propertyPath: m_TargetTexture
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114617588455909468, guid: 957d7b744c78d864c88cf79defb4e2df,
-        type: 2}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 135501228954613470, guid: 957d7b744c78d864c88cf79defb4e2df,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 135501228954613470, guid: 957d7b744c78d864c88cf79defb4e2df,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114617588455909468, guid: 957d7b744c78d864c88cf79defb4e2df,
-        type: 2}
-      propertyPath: m_FillCenter
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 223619664094200306, guid: 957d7b744c78d864c88cf79defb4e2df,
-        type: 2}
-      propertyPath: m_RenderMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 223619664094200306, guid: 957d7b744c78d864c88cf79defb4e2df,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 2020341532}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 957d7b744c78d864c88cf79defb4e2df, type: 2}
   m_IsPrefabParent: 0

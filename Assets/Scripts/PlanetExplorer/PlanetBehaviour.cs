@@ -31,17 +31,17 @@ public class PlanetBehaviour : MonoBehaviour {
     // Custom reticle events
     void OnReticleEnter()
     {
-        //Debug.Log("Entering over " + this.transform.parent.name); GALAXY NAME
+        //Debug.Log("Entering over " + this.transform.parent.name); 
         Invoke("OnMouseEnter", 0);
     }
     void OnReticleExit()
     {
-        //Debug.Log("Exiting over " + this.transform.parent.name); GALAXY NAME
+        //Debug.Log("Exiting over " + this.transform.parent.name); 
         Invoke("OnMouseExit", 0);
     }
     void OnReticleHover()
     {
-        Debug.Log("Hovering over " + this.transform.parent.name);
+        //Debug.Log("Hovering over " + this.transform.parent.name);
     }
 
 
