@@ -18,6 +18,9 @@ public class ItemInfo : MonoBehaviour {
     private static RectTransform aBtn;
     private static RectTransform xBtn;
 
+    private static float distanceMultiplier = 1.5f;
+    private static float divideBy = 3;
+
     private void Start()
     {
         itemInfo = transform.GetChild(0).gameObject;
@@ -109,11 +112,15 @@ public class ItemInfo : MonoBehaviour {
     }
 
 
+    /// <summary>
+    /// TESTING
+    /// </summary>
+    /// <param name="inventory"></param>
     private static void InventoryPos(PlayerInventorySlot inventory)
     {
-        
-        Vector3 vector = Camera.main.ScreenToViewportPoint(CameraPointer.instance.reticlePosition.position);
-        Vector3 inventoryVector = Camera.main.ScreenToViewportPoint(inventory.transform.position);
+
+        Vector3 vector = Camera.main.ScreenToViewportPoint(ReticuleBehaviour.instance.Reticle.position);
+        //Vector3 inventoryVector = Camera.main.ScreenToViewportPoint(inventory.transform.position);
         //itemInfo.transform.position = Camera.main.ViewportToScreenPoint(inventoryVector);
 
         if (vector.x < 0.5F)
@@ -121,27 +128,60 @@ public class ItemInfo : MonoBehaviour {
             Debug.Log(vector + " Left Side");
 
             Vector3 addedPos = Camera.main.ScreenToViewportPoint(new Vector3(
-                inventory.transform.position.x + (itemInfo.GetComponent<RectTransform>().rect.width / 2),
-                inventory.transform.position.y + (itemInfo.GetComponent<RectTransform>().rect.height / 2),
+                inventory.transform.position.x + (itemInfo.GetComponent<RectTransform>().rect.width / divideBy),
+                inventory.transform.position.y + (itemInfo.GetComponent<RectTransform>().rect.height / divideBy),
                 0));
-            itemInfo.transform.position = Camera.main.ViewportToScreenPoint(addedPos) + vector * 10;
+            itemInfo.transform.position = Camera.main.ViewportToScreenPoint(addedPos) + (vector * distanceMultiplier);
 
         }
         else
         {
             Debug.Log(vector + " Right Side");
             Vector3 addedPos = Camera.main.ScreenToViewportPoint(new Vector3(
-                inventory.transform.position.x - (itemInfo.GetComponent<RectTransform>().rect.width / 2),
-                inventory.transform.position.y + (itemInfo.GetComponent<RectTransform>().rect.height / 2),
+                inventory.transform.position.x - (itemInfo.GetComponent<RectTransform>().rect.width / divideBy),
+                inventory.transform.position.y + (itemInfo.GetComponent<RectTransform>().rect.height / divideBy),
                 0));
-            itemInfo.transform.position = Camera.main.ViewportToScreenPoint(addedPos) + vector * 10;
+            itemInfo.transform.position = Camera.main.ViewportToScreenPoint(addedPos) + (vector * distanceMultiplier);
         }
     }
 
+    /// <summary>
+    /// BACKUP
+    /// </summary>
+    /// <param name="equipment"></param>
+    //private static void InventoryPos(PlayerInventorySlot inventory)
+    //{
+        
+    //    Vector3 vector = Camera.main.ScreenToViewportPoint(ReticuleBehaviour.instance.Reticle.position);
+    //    //Vector3 inventoryVector = Camera.main.ScreenToViewportPoint(inventory.transform.position);
+    //    //itemInfo.transform.position = Camera.main.ViewportToScreenPoint(inventoryVector);
+
+    //    if (vector.x < 0.5F)
+    //    {
+    //        Debug.Log(vector + " Left Side");
+
+    //        Vector3 addedPos = Camera.main.ScreenToViewportPoint(new Vector3(
+    //            inventory.transform.position.x + (itemInfo.GetComponent<RectTransform>().rect.width / divideBy),
+    //            inventory.transform.position.y + (itemInfo.GetComponent<RectTransform>().rect.height / divideBy),
+    //            0));
+    //        itemInfo.transform.position = Camera.main.ViewportToScreenPoint(addedPos) + (vector * distanceMultiplier);
+
+    //    }
+    //    else
+    //    {
+    //        Debug.Log(vector + " Right Side");
+    //        Vector3 addedPos = Camera.main.ScreenToViewportPoint(new Vector3(
+    //            inventory.transform.position.x - (itemInfo.GetComponent<RectTransform>().rect.width / divideBy),
+    //            inventory.transform.position.y + (itemInfo.GetComponent<RectTransform>().rect.height / divideBy),
+    //            0));
+    //        itemInfo.transform.position = Camera.main.ViewportToScreenPoint(addedPos) + (vector * distanceMultiplier);
+    //    }
+    //}
+
     private static void EquipmentPos(PlayerEquipmentSlot equipment)
     {
-        Vector3 vector = Camera.main.ScreenToViewportPoint(CameraPointer.instance.reticlePosition.position);
-        Vector3 inventoryVector = Camera.main.ScreenToViewportPoint(equipment.transform.position);
+        Vector3 vector = Camera.main.ScreenToViewportPoint(ReticuleBehaviour.instance.Reticle.position);
+        //Vector3 inventoryVector = Camera.main.ScreenToViewportPoint(equipment.transform.position);
         //itemInfo.transform.position = Camera.main.ViewportToScreenPoint(inventoryVector);
 
         if (vector.x < 0.5F)
@@ -149,20 +189,20 @@ public class ItemInfo : MonoBehaviour {
             Debug.Log(vector + " Left Side");
 
             Vector3 addedPos = Camera.main.ScreenToViewportPoint(new Vector3(
-                equipment.transform.position.x + (itemInfo.GetComponent<RectTransform>().rect.width / 2),
-                equipment.transform.position.y + (itemInfo.GetComponent<RectTransform>().rect.height / 2),
+                equipment.transform.position.x + (itemInfo.GetComponent<RectTransform>().rect.width / divideBy),
+                equipment.transform.position.y + (itemInfo.GetComponent<RectTransform>().rect.height / divideBy),
                 0));
-            itemInfo.transform.position = Camera.main.ViewportToScreenPoint(addedPos) + vector * 10;
+            itemInfo.transform.position = Camera.main.ViewportToScreenPoint(addedPos) + (vector * distanceMultiplier);
 
         }
         else
         {
             Debug.Log(vector + " Right Side");
             Vector3 addedPos = Camera.main.ScreenToViewportPoint(new Vector3(
-                equipment.transform.position.x - (itemInfo.GetComponent<RectTransform>().rect.width / 2),
-                equipment.transform.position.y + (itemInfo.GetComponent<RectTransform>().rect.height / 2),
+                equipment.transform.position.x - (itemInfo.GetComponent<RectTransform>().rect.width / divideBy),
+                equipment.transform.position.y + (itemInfo.GetComponent<RectTransform>().rect.height / divideBy),
                 0));
-            itemInfo.transform.position = Camera.main.ViewportToScreenPoint(addedPos) + vector * 10;
+            itemInfo.transform.position = Camera.main.ViewportToScreenPoint(addedPos) + (vector * distanceMultiplier);
         }
     }
 

@@ -25,12 +25,12 @@ public class SceneHandler : MonoBehaviour {
         }
 
         DontDestroyOnLoad(gameObject);
-
+        GameStateHandler.SetStateAwake();
     }
 
     private void Update()
     {
-
+        
         if (SceneManager.GetActiveScene().name == "LoadingScreen")
         {
             //loadingBar = FindObjectOfType<Slider>();

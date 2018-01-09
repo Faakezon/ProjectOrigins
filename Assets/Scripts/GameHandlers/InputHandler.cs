@@ -7,13 +7,6 @@ public class InputHandler : MonoBehaviour {
 
     public static InputHandler instance = null;
 
-    public enum GameState
-    {
-        MainMenu, CharacterScreen, PlanetExplorer, Planet
-    }
-
-    public static GameState currentState;
-
 
     // Use this for initialization
     void Awake () {
@@ -27,69 +20,43 @@ public class InputHandler : MonoBehaviour {
         }
 
         DontDestroyOnLoad(gameObject);
-
-        //SetCurrentState(GameState.MainMenu);
-        SetStateAwake();
-
-        
-
-    }
-
-    void SetStateAwake()
-    {
-        switch (SceneManager.GetActiveScene().name)
-        {
-            case "MainMenu":
-                SetCurrentState(GameState.MainMenu);
-                break;
-            case "PlanetExplorer":
-                SetCurrentState(GameState.PlanetExplorer);
-                break;
-        }
+        Cursor.visible = true;
     }
 
     // Update is called once per frame
     void Update () {
 
-        //Debug.Log(currentState);
-
-        switch (currentState)
+        switch (GameStateHandler.currentGameState)
         {
-            case GameState.MainMenu:
+            case GameStateHandler.GameState.MainMenu:
                 MainMenuController();
                 MainCameraRef.instance.SetCameraStaticPos();
                 break;
-            case GameState.CharacterScreen:
+            case GameStateHandler.GameState.CharacterScreen:
                 CharacterScreen();
                 MainCameraRef.instance.SetCameraStaticPos();
                 break;
-            case GameState.PlanetExplorer:
+            case GameStateHandler.GameState.PlanetExplorer:
                 PlanetExplorerController();
                 MainCameraRef.instance.SetCameraStaticPos();
                 break;
-            case GameState.Planet:
+            case GameStateHandler.GameState.Planet:
                 PlanetController();
                 MainCameraRef.instance.SetCameraStaticPos();
                 break;
             default:
                 break;
         }
-
-
-
     }
 
-    public void SetCurrentState(GameState gameState)
-    {
-        currentState = gameState;
-    }
+    
 
     void MainMenuController()
     {
-        if (Input.GetButtonDown("Start") || Input.GetButtonDown("XboxA"))
+        if (Input.GetButtonDown("Start"))
         {
             Debug.Log("START");
-            SetCurrentState(GameState.CharacterScreen);
+            GameStateHandler.SetNewGameState(GameStateHandler.GameState.CharacterScreen);
             MenuManager.instance.RunCharacterScreen();
 
         }
@@ -100,11 +67,11 @@ public class InputHandler : MonoBehaviour {
     void CharacterScreen()
     {
         //Just a reset to MainLogoScreen if user deletes character.
-        if(MenuManager.currentState == MenuManager.MenuState.LogoScreen)
-            SetCurrentState(GameState.MainMenu);
+        //if(MenuManager.currentState == MenuManager.MenuState.LogoScreen)
+        //    GameStateHandler.SetNewGameState(GameStateHandler.GameState.MainMenu);
 
         if (SceneHandler.instance.GetCurrentScene().name == "PlanetExplorer")
-            SetCurrentState(GameState.PlanetExplorer);
+            GameStateHandler.SetNewGameState(GameStateHandler.GameState.PlanetExplorer);
     }
 
     void PlanetExplorerController()
@@ -112,7 +79,7 @@ public class InputHandler : MonoBehaviour {
         if (Input.GetButtonDown("Start"))
         {
             SceneHandler.instance.ToggleInventory();
-            MainCameraRef.instance.GlitchAttack();
+            CameraGlitchVFX.instance.GlitchAttack();
 
         }
     }

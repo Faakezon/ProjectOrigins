@@ -8,15 +8,10 @@ public class MenuManager : MonoBehaviour {
 
     public static MenuManager instance = null;
 
-
-    public enum MenuState
-    {
-        LogoScreen, CharacterScreen
-    }
-
-    public static MenuState currentState;
-
     private GameObject characterScreen;
+    private GameObject createCharacterScreen;
+    private GameObject loadCharacterScreen;
+
     private PlayerData playerData;
 
     private EventSystem es;
@@ -48,10 +43,10 @@ public class MenuManager : MonoBehaviour {
             Destroy(gameObject);
         }
 
-
-
-        currentState = MenuState.LogoScreen;
         CharacterScreen = GameObject.Find("CharacterScreen");
+        createCharacterScreen = CharacterScreen.transform.GetChild(0).gameObject;
+        loadCharacterScreen = CharacterScreen.transform.GetChild(1).gameObject;
+
         playerData = new PlayerData();
         es = FindObjectOfType<EventSystem>();
 	}
@@ -65,14 +60,18 @@ public class MenuManager : MonoBehaviour {
     public void ClearGameData()
     {
         Camera.main.GetComponent<Animator>().SetBool("CharacterScreen", false);
-        currentState = MenuState.LogoScreen;
+        Camera.main.GetComponent<Animator>().SetBool("PlanetExplorerState", false);
+        createCharacterScreen.SetActive(false);
+        loadCharacterScreen.SetActive(false);
         DataController.instance.ClearGameData();
+        GameStateHandler.SetNewGameState(GameStateHandler.GameState.MainMenu);
+        ReticuleBehaviour.instance.Reticle.position = ReticuleBehaviour.instance.startPos;
     }
 
     public void RunCharacterScreen()
     {
         Camera.main.GetComponent<Animator>().SetBool("CharacterScreen", true);
-        currentState = MenuState.CharacterScreen;
+
         CharacterScreen.transform.GetChild(0).gameObject.GetComponentInChildren<InputField>().text = "";
         gameDataExist = LoadGameData();
 
@@ -95,24 +94,21 @@ public class MenuManager : MonoBehaviour {
 
     void SetupExistingCharacterScreen()
     {
-        CharacterScreen.transform.GetChild(0).gameObject.SetActive(false);
-        CharacterScreen.transform.GetChild(1).gameObject.SetActive(true);
+        createCharacterScreen.SetActive(false);
+        loadCharacterScreen.SetActive(true);
 
-        CharacterScreen.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = DataController.instance.GetPlayerData().name;
+        loadCharacterScreen.transform.GetChild(1).GetComponent<Text>().text = DataController.instance.GetPlayerData().name;
     }
     
     void SetupCreateNewCharacterScreen()
     {
-        CharacterScreen.transform.GetChild(0).gameObject.SetActive(true);
-        CharacterScreen.transform.GetChild(1).gameObject.SetActive(false);
-
-
-
+        createCharacterScreen.SetActive(true); //Activate CreateCharacterScreen
+        loadCharacterScreen.SetActive(false); //Deactivate LoadCharacterScreen
     }
 
     public void CreateNewCharacter()
     {
-        playerData.name = CharacterScreen.transform.GetChild(0).gameObject.GetComponentInChildren<InputField>().text;
+        playerData.name = createCharacterScreen.GetComponentInChildren<InputField>().text;
         DataController.instance.SaveGameData(playerData);
         gameDataExist = LoadGameData();
 

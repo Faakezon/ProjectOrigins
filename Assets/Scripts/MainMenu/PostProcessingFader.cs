@@ -10,7 +10,7 @@ public class PostProcessingFader : MonoBehaviour {
     private PostProcessingProfile mainMenuProfile;
     private BloomModel.Settings bloom;
 
-    private ParticleSystem ps;
+    //private ParticleSystem ps;
 
 	// Use this for initialization
 	void Start () {
@@ -23,24 +23,14 @@ public class PostProcessingFader : MonoBehaviour {
         if (SceneManager.GetActiveScene().name != "MainMenu")
             return;
 
-        ps = GameObject.Find("Particle System").GetComponent<ParticleSystem>();
+        //ps = GameObject.Find("Particle System").GetComponent<ParticleSystem>();
 
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-        switch (MenuManager.currentState)
-        {
-            case MenuManager.MenuState.LogoScreen:
-                FadeIn();
-                break;
-            case MenuManager.MenuState.CharacterScreen:
-                FadeOut();
-                break;
-            default:
-                break;
-        }
+
     }
 
     void FadeIn()
@@ -53,15 +43,15 @@ public class PostProcessingFader : MonoBehaviour {
         //EnlargeParticleSize();
     }
 
-    void EnlargeParticleSize()
-    {
-        if (ps == null) return;
+    //void EnlargeParticleSize()
+    //{
+    //    if (ps == null) return;
 
-        if (ps.startSize < 12)
-        {
-            ps.startSize += 0.5f * Time.deltaTime;
-        }
-    }
+    //    if (ps.startSize < 12)
+    //    {
+    //        ps.startSize += 0.5f * Time.deltaTime;
+    //    }
+    //}
 
     void FadeOut()
     {

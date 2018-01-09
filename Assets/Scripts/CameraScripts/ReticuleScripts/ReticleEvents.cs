@@ -5,12 +5,12 @@ using UnityEngine;
 public class ReticleEvents : MonoBehaviour {
 
     // Custom reticle events
-    void OnReticleEnter()
+    public void OnReticleEnter()
     {
-        //Debug.Log("Entering over " + this.transform.parent.name);
+        //Debug.Log("Entering over " + this.transform.parent.name + " , POSITION: " + this.transform.position);
         MenuManager.instance.SetSelectionForGamepad(this.transform.parent.gameObject);
     }
-    void OnReticleExit()
+    public void OnReticleExit()
     {
         //Debug.Log("Exiting over " + this.transform.parent.name);
         MenuManager.instance.SetSelectionForGamepad(null);

@@ -8,10 +8,12 @@
 
 ### Updates:
 
-#### Origins-V01-Inventory System
-
 To do:
+Fix ItemInfo scalable UI for different resolutions.
+Fix the custom cursor bug so it always detect menu elements with collisions and raycast.
+Fix that ItemInfo show more specific armor type than just armor. Should display Head, Torso or Boots.
 
+#### Origins-V01-Inventory System
 
 Update:
 * Inventory with ability to hold, equip, show items.

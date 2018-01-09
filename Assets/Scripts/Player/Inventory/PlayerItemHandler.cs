@@ -44,7 +44,7 @@ public class PlayerItemHandler : MonoBehaviour {
     {
         if (other.tag == "ItemRepresentation")
         {
-            ItemRepresentation tempItemRep = other.GetComponent<ItemRepresentation>();
+            //ItemRepresentation tempItemRep = other.GetComponent<ItemRepresentation>();
 
             ItemInfo.CloseInfo();
 
