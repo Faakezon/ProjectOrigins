@@ -79,6 +79,7 @@ public class MenuManager : MonoBehaviour {
         if (gameDataExist) //There was a character already.
         {
             SetupExistingCharacterScreen();
+            DisplayPlayerRepresentation.instance.SetupPlayerRepresentation();
 
         }
         else //No character available, create one.
@@ -115,6 +116,7 @@ public class MenuManager : MonoBehaviour {
         if (gameDataExist) //There was a character already.
         {
             SetupExistingCharacterScreen();
+            DisplayPlayerRepresentation.instance.SetupPlayerRepresentation();
 
         }
         else //No character available, create one.

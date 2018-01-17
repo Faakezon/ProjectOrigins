@@ -856,12 +856,12 @@ Prefab:
     - target: {fileID: 224228442090626112, guid: 782c88e64d29ec14a91223c21e59b4a4,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 0.0000076294
       objectReference: {fileID: 0}
     - target: {fileID: 224228442090626112, guid: 782c88e64d29ec14a91223c21e59b4a4,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 400
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 224228442090626112, guid: 782c88e64d29ec14a91223c21e59b4a4,
         type: 2}
@@ -871,7 +871,7 @@ Prefab:
     - target: {fileID: 224228442090626112, guid: 782c88e64d29ec14a91223c21e59b4a4,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 400
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 224234531930954582, guid: 782c88e64d29ec14a91223c21e59b4a4,
         type: 2}
@@ -1343,6 +1343,26 @@ Prefab:
       propertyPath: m_AnchoredPosition.x
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 223172957213899912, guid: 782c88e64d29ec14a91223c21e59b4a4,
+        type: 2}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 223172957213899912, guid: 782c88e64d29ec14a91223c21e59b4a4,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 224035343853447956, guid: 782c88e64d29ec14a91223c21e59b4a4,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224228442090626112, guid: 782c88e64d29ec14a91223c21e59b4a4,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 782c88e64d29ec14a91223c21e59b4a4, type: 2}
   m_IsPrefabParent: 0
@@ -1462,7 +1482,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000060406, y: 327}
+  m_AnchoredPosition: {x: -0.000060406004, y: 327}
   m_SizeDelta: {x: 646, y: 121.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &724265432
@@ -1580,7 +1600,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 414.6, y: -29.4}
+  m_AnchoredPosition: {x: 414.6, y: -29.400002}
   m_SizeDelta: {x: 384.7, y: 335.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &784679095
@@ -1627,6 +1647,7 @@ GameObject:
   - component: {fileID: 787531365}
   - component: {fileID: 787531364}
   - component: {fileID: 787531363}
+  - component: {fileID: 787531367}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -1712,6 +1733,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &787531367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 787531362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55a31d4e3928d5418d0d825d39650d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &828443199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1744,7 +1776,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15, y: -0.000022888}
+  m_AnchoredPosition: {x: 15, y: -0.000022888002}
   m_SizeDelta: {x: 219.6, y: 268.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &828443201
@@ -1811,8 +1843,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 918545086}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -562}
-  m_LocalScale: {x: 100, y: 100, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -414.4}
+  m_LocalScale: {x: 282.2736, y: 148.29312, z: 0}
   m_Children: []
   m_Father: {fileID: 742883670}
   m_RootOrder: 3
@@ -1859,7 +1891,7 @@ MeshCollider:
   m_GameObject: {fileID: 918545086}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Convex: 0
   m_InflateMesh: 0

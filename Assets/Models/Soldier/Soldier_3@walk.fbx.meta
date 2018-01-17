@@ -1,0 +1,1196 @@
+fileFormatVersion: 2
+guid: 3f1c03c3bc91532478b98c626227c460
+timeCreated: 1516133724
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Soldier2:AnimData_Head
+    100002: Soldier2:AnimData_HeadTop_End
+    100004: Soldier2:AnimData_Hips
+    100006: Soldier2:AnimData_Joint_GRP
+    100008: Soldier2:AnimData_LeftArm
+    100010: Soldier2:AnimData_LeftFoot
+    100012: Soldier2:AnimData_LeftForeArm
+    100014: Soldier2:AnimData_LeftHand
+    100016: Soldier2:AnimData_LeftHandIndex1
+    100018: Soldier2:AnimData_LeftHandIndex2
+    100020: Soldier2:AnimData_LeftHandIndex3
+    100022: Soldier2:AnimData_LeftHandIndex4
+    100024: Soldier2:AnimData_LeftHandMiddle1
+    100026: Soldier2:AnimData_LeftHandMiddle2
+    100028: Soldier2:AnimData_LeftHandMiddle3
+    100030: Soldier2:AnimData_LeftHandMiddle4
+    100032: Soldier2:AnimData_LeftHandPinky1
+    100034: Soldier2:AnimData_LeftHandPinky2
+    100036: Soldier2:AnimData_LeftHandPinky3
+    100038: Soldier2:AnimData_LeftHandPinky4
+    100040: Soldier2:AnimData_LeftHandRing1
+    100042: Soldier2:AnimData_LeftHandRing2
+    100044: Soldier2:AnimData_LeftHandRing3
+    100046: Soldier2:AnimData_LeftHandRing4
+    100048: Soldier2:AnimData_LeftHandThumb1
+    100050: Soldier2:AnimData_LeftHandThumb2
+    100052: Soldier2:AnimData_LeftHandThumb3
+    100054: Soldier2:AnimData_LeftHandThumb4
+    100056: Soldier2:AnimData_LeftLeg
+    100058: Soldier2:AnimData_LeftShoulder
+    100060: Soldier2:AnimData_LeftToe_End
+    100062: Soldier2:AnimData_LeftToeBase
+    100064: Soldier2:AnimData_LeftUpLeg
+    100066: Soldier2:AnimData_Neck
+    100068: Soldier2:AnimData_RightArm
+    100070: Soldier2:AnimData_RightFoot
+    100072: Soldier2:AnimData_RightForeArm
+    100074: Soldier2:AnimData_RightHand
+    100076: Soldier2:AnimData_RightHandIndex1
+    100078: Soldier2:AnimData_RightHandIndex2
+    100080: Soldier2:AnimData_RightHandIndex3
+    100082: Soldier2:AnimData_RightHandIndex4
+    100084: Soldier2:AnimData_RightHandMiddle1
+    100086: Soldier2:AnimData_RightHandMiddle2
+    100088: Soldier2:AnimData_RightHandMiddle3
+    100090: Soldier2:AnimData_RightHandMiddle4
+    100092: Soldier2:AnimData_RightHandPinky1
+    100094: Soldier2:AnimData_RightHandPinky2
+    100096: Soldier2:AnimData_RightHandPinky3
+    100098: Soldier2:AnimData_RightHandPinky4
+    100100: Soldier2:AnimData_RightHandRing1
+    100102: Soldier2:AnimData_RightHandRing2
+    100104: Soldier2:AnimData_RightHandRing3
+    100106: Soldier2:AnimData_RightHandRing4
+    100108: Soldier2:AnimData_RightHandThumb1
+    100110: Soldier2:AnimData_RightHandThumb2
+    100112: Soldier2:AnimData_RightHandThumb3
+    100114: Soldier2:AnimData_RightHandThumb4
+    100116: Soldier2:AnimData_RightLeg
+    100118: Soldier2:AnimData_RightShoulder
+    100120: Soldier2:AnimData_RightToe_End
+    100122: Soldier2:AnimData_RightToeBase
+    100124: Soldier2:AnimData_RightUpLeg
+    100126: Soldier2:AnimData_Spine
+    100128: Soldier2:AnimData_Spine1
+    100130: Soldier2:AnimData_Spine2
+    100132: Soldier2:Bind_Head
+    100134: Soldier2:Bind_HeadTop_End
+    100136: Soldier2:Bind_Hips
+    100138: Soldier2:Bind_Joint_GRP
+    100140: Soldier2:Bind_LeftArm
+    100142: Soldier2:Bind_LeftFoot
+    100144: Soldier2:Bind_LeftForeArm
+    100146: Soldier2:Bind_LeftHand
+    100148: Soldier2:Bind_LeftHandIndex1
+    100150: Soldier2:Bind_LeftHandIndex2
+    100152: Soldier2:Bind_LeftHandIndex3
+    100154: Soldier2:Bind_LeftHandIndex4
+    100156: Soldier2:Bind_LeftHandMiddle1
+    100158: Soldier2:Bind_LeftHandMiddle2
+    100160: Soldier2:Bind_LeftHandMiddle3
+    100162: Soldier2:Bind_LeftHandMiddle4
+    100164: Soldier2:Bind_LeftHandPinky1
+    100166: Soldier2:Bind_LeftHandPinky2
+    100168: Soldier2:Bind_LeftHandPinky3
+    100170: Soldier2:Bind_LeftHandPinky4
+    100172: Soldier2:Bind_LeftHandRing1
+    100174: Soldier2:Bind_LeftHandRing2
+    100176: Soldier2:Bind_LeftHandRing3
+    100178: Soldier2:Bind_LeftHandRing4
+    100180: Soldier2:Bind_LeftHandThumb1
+    100182: Soldier2:Bind_LeftHandThumb2
+    100184: Soldier2:Bind_LeftHandThumb3
+    100186: Soldier2:Bind_LeftHandThumb4
+    100188: Soldier2:Bind_LeftLeg
+    100190: Soldier2:Bind_LeftShoulder
+    100192: Soldier2:Bind_LeftToe_End
+    100194: Soldier2:Bind_LeftToeBase
+    100196: Soldier2:Bind_LeftUpLeg
+    100198: Soldier2:Bind_Neck
+    100200: Soldier2:Bind_RightArm
+    100202: Soldier2:Bind_RightFoot
+    100204: Soldier2:Bind_RightForeArm
+    100206: Soldier2:Bind_RightHand
+    100208: Soldier2:Bind_RightHandIndex1
+    100210: Soldier2:Bind_RightHandIndex2
+    100212: Soldier2:Bind_RightHandIndex3
+    100214: Soldier2:Bind_RightHandIndex4
+    100216: Soldier2:Bind_RightHandMiddle1
+    100218: Soldier2:Bind_RightHandMiddle2
+    100220: Soldier2:Bind_RightHandMiddle3
+    100222: Soldier2:Bind_RightHandMiddle4
+    100224: Soldier2:Bind_RightHandPinky1
+    100226: Soldier2:Bind_RightHandPinky2
+    100228: Soldier2:Bind_RightHandPinky3
+    100230: Soldier2:Bind_RightHandPinky4
+    100232: Soldier2:Bind_RightHandRing1
+    100234: Soldier2:Bind_RightHandRing2
+    100236: Soldier2:Bind_RightHandRing3
+    100238: Soldier2:Bind_RightHandRing4
+    100240: Soldier2:Bind_RightHandThumb1
+    100242: Soldier2:Bind_RightHandThumb2
+    100244: Soldier2:Bind_RightHandThumb3
+    100246: Soldier2:Bind_RightHandThumb4
+    100248: Soldier2:Bind_RightLeg
+    100250: Soldier2:Bind_RightShoulder
+    100252: Soldier2:Bind_RightToe_End
+    100254: Soldier2:Bind_RightToeBase
+    100256: Soldier2:Bind_RightUpLeg
+    100258: Soldier2:Bind_Spine
+    100260: Soldier2:Bind_Spine1
+    100262: Soldier2:Bind_Spine2
+    100264: Soldier2:CTRL_GRP
+    100266: Soldier2:Joint_GRP
+    100268: Soldier2:LeftFoot_IK_BakingLOC
+    100270: Soldier2:LeftForeArm_IK_BakingLOC
+    100272: Soldier2:Lefthand_AttachmentLOC
+    100274: Soldier2:LeftLeg_IK_BakingLOC
+    100276: Soldier2:RightFoot_IK_BakingLOC
+    100278: Soldier2:RightForeArm_IK_BakingLOC
+    100280: Soldier2:RightHand_AttachmentLOC
+    100282: Soldier2:RightLeg_IK_BakingLOC
+    100284: //RootNode
+    400000: Soldier2:AnimData_Head
+    400002: Soldier2:AnimData_HeadTop_End
+    400004: Soldier2:AnimData_Hips
+    400006: Soldier2:AnimData_Joint_GRP
+    400008: Soldier2:AnimData_LeftArm
+    400010: Soldier2:AnimData_LeftFoot
+    400012: Soldier2:AnimData_LeftForeArm
+    400014: Soldier2:AnimData_LeftHand
+    400016: Soldier2:AnimData_LeftHandIndex1
+    400018: Soldier2:AnimData_LeftHandIndex2
+    400020: Soldier2:AnimData_LeftHandIndex3
+    400022: Soldier2:AnimData_LeftHandIndex4
+    400024: Soldier2:AnimData_LeftHandMiddle1
+    400026: Soldier2:AnimData_LeftHandMiddle2
+    400028: Soldier2:AnimData_LeftHandMiddle3
+    400030: Soldier2:AnimData_LeftHandMiddle4
+    400032: Soldier2:AnimData_LeftHandPinky1
+    400034: Soldier2:AnimData_LeftHandPinky2
+    400036: Soldier2:AnimData_LeftHandPinky3
+    400038: Soldier2:AnimData_LeftHandPinky4
+    400040: Soldier2:AnimData_LeftHandRing1
+    400042: Soldier2:AnimData_LeftHandRing2
+    400044: Soldier2:AnimData_LeftHandRing3
+    400046: Soldier2:AnimData_LeftHandRing4
+    400048: Soldier2:AnimData_LeftHandThumb1
+    400050: Soldier2:AnimData_LeftHandThumb2
+    400052: Soldier2:AnimData_LeftHandThumb3
+    400054: Soldier2:AnimData_LeftHandThumb4
+    400056: Soldier2:AnimData_LeftLeg
+    400058: Soldier2:AnimData_LeftShoulder
+    400060: Soldier2:AnimData_LeftToe_End
+    400062: Soldier2:AnimData_LeftToeBase
+    400064: Soldier2:AnimData_LeftUpLeg
+    400066: Soldier2:AnimData_Neck
+    400068: Soldier2:AnimData_RightArm
+    400070: Soldier2:AnimData_RightFoot
+    400072: Soldier2:AnimData_RightForeArm
+    400074: Soldier2:AnimData_RightHand
+    400076: Soldier2:AnimData_RightHandIndex1
+    400078: Soldier2:AnimData_RightHandIndex2
+    400080: Soldier2:AnimData_RightHandIndex3
+    400082: Soldier2:AnimData_RightHandIndex4
+    400084: Soldier2:AnimData_RightHandMiddle1
+    400086: Soldier2:AnimData_RightHandMiddle2
+    400088: Soldier2:AnimData_RightHandMiddle3
+    400090: Soldier2:AnimData_RightHandMiddle4
+    400092: Soldier2:AnimData_RightHandPinky1
+    400094: Soldier2:AnimData_RightHandPinky2
+    400096: Soldier2:AnimData_RightHandPinky3
+    400098: Soldier2:AnimData_RightHandPinky4
+    400100: Soldier2:AnimData_RightHandRing1
+    400102: Soldier2:AnimData_RightHandRing2
+    400104: Soldier2:AnimData_RightHandRing3
+    400106: Soldier2:AnimData_RightHandRing4
+    400108: Soldier2:AnimData_RightHandThumb1
+    400110: Soldier2:AnimData_RightHandThumb2
+    400112: Soldier2:AnimData_RightHandThumb3
+    400114: Soldier2:AnimData_RightHandThumb4
+    400116: Soldier2:AnimData_RightLeg
+    400118: Soldier2:AnimData_RightShoulder
+    400120: Soldier2:AnimData_RightToe_End
+    400122: Soldier2:AnimData_RightToeBase
+    400124: Soldier2:AnimData_RightUpLeg
+    400126: Soldier2:AnimData_Spine
+    400128: Soldier2:AnimData_Spine1
+    400130: Soldier2:AnimData_Spine2
+    400132: Soldier2:Bind_Head
+    400134: Soldier2:Bind_HeadTop_End
+    400136: Soldier2:Bind_Hips
+    400138: Soldier2:Bind_Joint_GRP
+    400140: Soldier2:Bind_LeftArm
+    400142: Soldier2:Bind_LeftFoot
+    400144: Soldier2:Bind_LeftForeArm
+    400146: Soldier2:Bind_LeftHand
+    400148: Soldier2:Bind_LeftHandIndex1
+    400150: Soldier2:Bind_LeftHandIndex2
+    400152: Soldier2:Bind_LeftHandIndex3
+    400154: Soldier2:Bind_LeftHandIndex4
+    400156: Soldier2:Bind_LeftHandMiddle1
+    400158: Soldier2:Bind_LeftHandMiddle2
+    400160: Soldier2:Bind_LeftHandMiddle3
+    400162: Soldier2:Bind_LeftHandMiddle4
+    400164: Soldier2:Bind_LeftHandPinky1
+    400166: Soldier2:Bind_LeftHandPinky2
+    400168: Soldier2:Bind_LeftHandPinky3
+    400170: Soldier2:Bind_LeftHandPinky4
+    400172: Soldier2:Bind_LeftHandRing1
+    400174: Soldier2:Bind_LeftHandRing2
+    400176: Soldier2:Bind_LeftHandRing3
+    400178: Soldier2:Bind_LeftHandRing4
+    400180: Soldier2:Bind_LeftHandThumb1
+    400182: Soldier2:Bind_LeftHandThumb2
+    400184: Soldier2:Bind_LeftHandThumb3
+    400186: Soldier2:Bind_LeftHandThumb4
+    400188: Soldier2:Bind_LeftLeg
+    400190: Soldier2:Bind_LeftShoulder
+    400192: Soldier2:Bind_LeftToe_End
+    400194: Soldier2:Bind_LeftToeBase
+    400196: Soldier2:Bind_LeftUpLeg
+    400198: Soldier2:Bind_Neck
+    400200: Soldier2:Bind_RightArm
+    400202: Soldier2:Bind_RightFoot
+    400204: Soldier2:Bind_RightForeArm
+    400206: Soldier2:Bind_RightHand
+    400208: Soldier2:Bind_RightHandIndex1
+    400210: Soldier2:Bind_RightHandIndex2
+    400212: Soldier2:Bind_RightHandIndex3
+    400214: Soldier2:Bind_RightHandIndex4
+    400216: Soldier2:Bind_RightHandMiddle1
+    400218: Soldier2:Bind_RightHandMiddle2
+    400220: Soldier2:Bind_RightHandMiddle3
+    400222: Soldier2:Bind_RightHandMiddle4
+    400224: Soldier2:Bind_RightHandPinky1
+    400226: Soldier2:Bind_RightHandPinky2
+    400228: Soldier2:Bind_RightHandPinky3
+    400230: Soldier2:Bind_RightHandPinky4
+    400232: Soldier2:Bind_RightHandRing1
+    400234: Soldier2:Bind_RightHandRing2
+    400236: Soldier2:Bind_RightHandRing3
+    400238: Soldier2:Bind_RightHandRing4
+    400240: Soldier2:Bind_RightHandThumb1
+    400242: Soldier2:Bind_RightHandThumb2
+    400244: Soldier2:Bind_RightHandThumb3
+    400246: Soldier2:Bind_RightHandThumb4
+    400248: Soldier2:Bind_RightLeg
+    400250: Soldier2:Bind_RightShoulder
+    400252: Soldier2:Bind_RightToe_End
+    400254: Soldier2:Bind_RightToeBase
+    400256: Soldier2:Bind_RightUpLeg
+    400258: Soldier2:Bind_Spine
+    400260: Soldier2:Bind_Spine1
+    400262: Soldier2:Bind_Spine2
+    400264: Soldier2:CTRL_GRP
+    400266: Soldier2:Joint_GRP
+    400268: Soldier2:LeftFoot_IK_BakingLOC
+    400270: Soldier2:LeftForeArm_IK_BakingLOC
+    400272: Soldier2:Lefthand_AttachmentLOC
+    400274: Soldier2:LeftLeg_IK_BakingLOC
+    400276: Soldier2:RightFoot_IK_BakingLOC
+    400278: Soldier2:RightForeArm_IK_BakingLOC
+    400280: Soldier2:RightHand_AttachmentLOC
+    400282: Soldier2:RightLeg_IK_BakingLOC
+    400284: //RootNode
+    7400000: walk
+    7400002: walk (1)
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walk
+      takeName: Take 001
+      firstFrame: 30
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0.96
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 10
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: Soldier2:Bind_Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_LeftHandThumb1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_LeftHandThumb2
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_LeftHandThumb3
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_LeftHandMiddle1
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_LeftHandMiddle2
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_LeftHandMiddle3
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_LeftHandRing1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_LeftHandRing2
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_LeftHandRing3
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_LeftHandPinky1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_LeftHandPinky2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_LeftHandPinky3
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_RightHandThumb1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_RightHandThumb2
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_RightHandThumb3
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_RightHandMiddle1
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_RightHandMiddle2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_RightHandMiddle3
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_RightHandRing1
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_RightHandRing2
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_RightHandRing3
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_RightHandPinky1
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_RightHandPinky2
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_RightHandPinky3
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Soldier2:Bind_Spine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Soldier_3(Clone)
+      parentName: 
+      position: {x: 0.00035209654, y: -0.003450566, z: -0.014806222}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:CTRL_GRP
+      parentName: Soldier_3(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:global_CTRL
+      parentName: Soldier2:CTRL_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Root_CTRL_POS_GRP
+      parentName: Soldier2:global_CTRL
+      position: {x: -0.0003557944, y: 0.9684065, z: 0.01204927}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Root_CTRL_AnimData_CONST_GRP
+      parentName: Soldier2:Root_CTRL_POS_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.000000057048965, y: -0.0000011944238, z: 0.00004004834, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Root_CTRL_In_Rig_CONST_GRP
+      parentName: Soldier2:Root_CTRL_AnimData_CONST_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Root_CTRL
+      parentName: Soldier2:Root_CTRL_In_Rig_CONST_GRP
+      position: {x: -0.000002554187, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Joint_GRP
+      parentName: Soldier_3(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_Joint_GRP
+      parentName: Soldier2:Joint_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_Hips
+      parentName: Soldier2:Bind_Joint_GRP
+      position: {x: -0.00035834854, y: 0.9684065, z: 0.01204927}
+      rotation: {x: -0.000000057048965, y: -0.0000011944238, z: 0.00004004834, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_Spine
+      parentName: Soldier2:Bind_Hips
+      position: {x: -0, y: 0.08183002, z: -0.00905362}
+      rotation: {x: -0.055067666, y: 0.0000033979888, z: -0.0000399218, w: 0.99848264}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_Spine1
+      parentName: Soldier2:Bind_Spine
+      position: {x: -0, y: 0.096050866, z: -2.9307754e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_Spine2
+      parentName: Soldier2:Bind_Spine1
+      position: {x: -0, y: 0.10977249, z: 1.1895548e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightShoulder
+      parentName: Soldier2:Bind_Spine2
+      position: {x: 0.060501125, y: 0.106423944, z: -0.0020318807}
+      rotation: {x: -0.5197877, y: -0.47651914, z: 0.5290032, w: -0.47212905}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightArm
+      parentName: Soldier2:Bind_RightShoulder
+      position: {x: 2.9098626e-10, y: 0.12580095, z: 0.0000000024484894}
+      rotation: {x: -0.06469121, y: 0.4945553, z: -0.009639815, w: 0.86668175}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightForeArm
+      parentName: Soldier2:Bind_RightArm
+      position: {x: 4.0861187e-10, y: 0.2290172, z: 0.0000000029095513}
+      rotation: {x: -0.000008649685, y: -0.09038049, z: -0.000016826234, w: 0.9959073}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:RightForeArm_IK_BakingLOC
+      parentName: Soldier2:Bind_RightForeArm
+      position: {x: 0.1145086, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightHand
+      parentName: Soldier2:Bind_RightForeArm
+      position: {x: -0.0000000016523237, y: 0.2573689, z: -0.0000000023899485}
+      rotation: {x: 0.13005587, y: -0.42868, z: -0.099670336, w: 0.8884733}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:RightHand_AttachmentLOC
+      parentName: Soldier2:Bind_RightHand
+      position: {x: -0.0055044093, y: 0.053696886, z: 0.013189243}
+      rotation: {x: 0.81097376, y: -0.58488363, z: -0.014969303, w: 0.002954725}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightHandPinky1
+      parentName: Soldier2:Bind_RightHand
+      position: {x: 0.03125486, y: 0.05802042, z: -0.0024835474}
+      rotation: {x: -0.04632758, y: -0.05113842, z: 0.08361309, w: 0.99410635}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightHandPinky2
+      parentName: Soldier2:Bind_RightHandPinky1
+      position: {x: -0.00007039849, y: 0.021739176, z: -8.614966e-11}
+      rotation: {x: -0.0000002817252, y: -0.00005753742, z: 0.002435864, w: 0.999997}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightHandPinky3
+      parentName: Soldier2:Bind_RightHandPinky2
+      position: {x: 0.0000334965, y: 0.01816083, z: -2.8447864e-11}
+      rotation: {x: 0.00000047531893, y: 0.00008415758, z: 0.00045028445, w: 0.9999999}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightHandPinky4
+      parentName: Soldier2:Bind_RightHandPinky3
+      position: {x: 0.000036902853, y: 0.015671933, z: 8.19091e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightHandThumb1
+      parentName: Soldier2:Bind_RightHand
+      position: {x: -0.021775229, y: 0.0201853, z: 0.015221641}
+      rotation: {x: 0.101430416, y: -0.00725591, z: 0.28209093, w: 0.9539832}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightHandThumb2
+      parentName: Soldier2:Bind_RightHandThumb1
+      position: {x: -0.0068725045, y: 0.025793137, z: -6.8700864e-11}
+      rotation: {x: 0.00021086124, y: -0.0019675912, z: 0.15313073, w: 0.988204}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightHandThumb3
+      parentName: Soldier2:Bind_RightHandThumb2
+      position: {x: 0.0011983922, y: 0.025441198, z: 7.9602366e-11}
+      rotation: {x: -0.00089723413, y: -0.0059091737, z: 0.103416584, w: 0.9946202}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightHandThumb4
+      parentName: Soldier2:Bind_RightHandThumb3
+      position: {x: 0.0056741117, y: 0.021807844, z: 2.1655956e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightHandIndex1
+      parentName: Soldier2:Bind_RightHand
+      position: {x: -0.031641025, y: 0.0687439, z: -0.0011989536}
+      rotation: {x: -0.049860388, y: -0.010862607, z: 0.08994469, w: 0.9946386}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightHandIndex2
+      parentName: Soldier2:Bind_RightHandIndex1
+      position: {x: 0.00033163288, y: 0.024646204, z: 2.7061286e-11}
+      rotation: {x: 0.0000019195895, y: 0.0003689599, z: -0.009039458, w: 0.9999591}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightHandIndex3
+      parentName: Soldier2:Bind_RightHandIndex2
+      position: {x: -0.000096010015, y: 0.021312574, z: -3.878435e-11}
+      rotation: {x: 0.0000022295144, y: -0.0002893528, z: -0.003653339, w: 0.9999933}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightHandIndex4
+      parentName: Soldier2:Bind_RightHandIndex3
+      position: {x: -0.00023562269, y: 0.02000091, z: 1.8670775e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightHandMiddle1
+      parentName: Soldier2:Bind_RightHand
+      position: {x: -0.011395236, y: 0.067928456, z: -0.0069887536}
+      rotation: {x: -0.04892707, y: -0.02136527, z: 0.08345046, w: 0.99508077}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightHandMiddle2
+      parentName: Soldier2:Bind_RightHandMiddle1
+      position: {x: -0.000019793966, y: 0.029401023, z: 1.5343281e-10}
+      rotation: {x: 0.0000003910806, y: -0.00013372072, z: -0.000039279523, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightHandMiddle3
+      parentName: Soldier2:Bind_RightHandMiddle2
+      position: {x: -0.000020188738, y: 0.026363783, z: -1.6669571e-10}
+      rotation: {x: 0.0000000033847984, y: 0.000062945815, z: 0.0011633934, w: 0.99999934}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightHandMiddle4
+      parentName: Soldier2:Bind_RightHandMiddle3
+      position: {x: 0.000039981078, y: 0.025509654, z: -0.0000000011135568}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightHandRing1
+      parentName: Soldier2:Bind_RightHand
+      position: {x: 0.011781396, y: 0.067340255, z: -0.003850859}
+      rotation: {x: -0.049035612, y: -0.019635854, z: 0.080952115, w: 0.9953174}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightHandRing2
+      parentName: Soldier2:Bind_RightHandRing1
+      position: {x: -0.00014184124, y: 0.02537124, z: 7.4432814e-11}
+      rotation: {x: 0.000001038631, y: -0.00034829704, z: 0.0034029111, w: 0.99999416}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightHandRing3
+      parentName: Soldier2:Bind_RightHandRing2
+      position: {x: 0.00003234416, y: 0.023296526, z: 3.3083275e-10}
+      rotation: {x: 0.00000046274678, y: 0.0002793505, z: 0.0019251505, w: 0.99999815}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightHandRing4
+      parentName: Soldier2:Bind_RightHandRing3
+      position: {x: 0.00010949811, y: 0.021412956, z: 4.802287e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftShoulder
+      parentName: Soldier2:Bind_Spine2
+      position: {x: -0.060501125, y: 0.10639263, z: -0.0017488227}
+      rotation: {x: 0.540436, y: -0.49263203, z: 0.50814253, w: 0.45500964}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftArm
+      parentName: Soldier2:Bind_LeftShoulder
+      position: {x: -0.00013170936, y: 0.12591831, z: 0.0011493694}
+      rotation: {x: -0.060680825, y: -0.33272168, z: -0.00587833, w: 0.9410524}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftForeArm
+      parentName: Soldier2:Bind_LeftArm
+      position: {x: -3.5187628e-10, y: 0.22907065, z: -0.0000000023460172}
+      rotation: {x: -0.00000804103, y: 0.08920955, z: 0.000016373586, w: 0.99601287}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:LeftForeArm_IK_BakingLOC
+      parentName: Soldier2:Bind_LeftForeArm
+      position: {x: -0.114535324, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftHand
+      parentName: Soldier2:Bind_LeftForeArm
+      position: {x: -2.2842545e-10, y: 0.2561568, z: 0.0000000095333785}
+      rotation: {x: 0.019560482, y: 0.26005593, z: 0.016929733, w: 0.965247}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Lefthand_AttachmentLOC
+      parentName: Soldier2:Bind_LeftHand
+      position: {x: 0.0026161042, y: 0.0576432, z: 0.007306548}
+      rotation: {x: 0.49829632, y: -0.4846261, z: 0.5479229, w: -0.4654233}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftHandThumb1
+      parentName: Soldier2:Bind_LeftHand
+      position: {x: 0.022042904, y: 0.020545557, z: 0.014823813}
+      rotation: {x: 0.0737336, y: 0.013727693, z: -0.30043116, w: 0.9508502}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftHandThumb2
+      parentName: Soldier2:Bind_LeftHandThumb1
+      position: {x: 0.0063438686, y: 0.026105858, z: 5.4042126e-10}
+      rotation: {x: 0.0002775207, y: 0.0029386142, z: -0.14365092, w: 0.989624}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftHandThumb3
+      parentName: Soldier2:Bind_LeftHandThumb2
+      position: {x: -0.0013106269, y: 0.026131164, z: -1.9033351e-10}
+      rotation: {x: -0.0012613651, y: 0.008923663, z: -0.090203576, w: 0.9958826}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftHandThumb4
+      parentName: Soldier2:Bind_LeftHandThumb3
+      position: {x: -0.0050332434, y: 0.021406218, z: 2.0117684e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftHandMiddle1
+      parentName: Soldier2:Bind_LeftHand
+      position: {x: 0.010554433, y: 0.06670161, z: -0.0062793973}
+      rotation: {x: -0.045551743, y: 0.013372858, z: -0.08998034, w: 0.9948114}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftHandMiddle2
+      parentName: Soldier2:Bind_LeftHandMiddle1
+      position: {x: -0.00068929157, y: 0.030547837, z: 5.679271e-10}
+      rotation: {x: 0.000022956216, y: -0.0021944274, z: 0.012207495, w: 0.9999231}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftHandMiddle3
+      parentName: Soldier2:Bind_LeftHandMiddle2
+      position: {x: 0.000054220585, y: 0.02726942, z: 3.4324057e-10}
+      rotation: {x: 0.000032263823, y: 0.0023944215, z: 0.0115267895, w: 0.99993074}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftHandMiddle4
+      parentName: Soldier2:Bind_LeftHandMiddle3
+      position: {x: 0.00063506945, y: 0.02570531, z: 6.5596584e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftHandRing1
+      parentName: Soldier2:Bind_LeftHand
+      position: {x: -0.012902773, y: 0.06720739, z: -0.004068895}
+      rotation: {x: -0.045144793, y: 0.018165488, z: -0.08477211, w: 0.99521136}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftHandRing2
+      parentName: Soldier2:Bind_LeftHandRing1
+      position: {x: -0.0002950382, y: 0.025639124, z: 2.4486074e-10}
+      rotation: {x: 0.0000023749956, y: -0.0005924541, z: 0.0071440474, w: 0.9999743}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftHandRing3
+      parentName: Soldier2:Bind_LeftHandRing2
+      position: {x: 0.0000576194, y: 0.023182975, z: -4.7738077e-11}
+      rotation: {x: 0.000003258875, y: 0.0004936781, z: 0.0040271115, w: 0.9999918}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftHandRing4
+      parentName: Soldier2:Bind_LeftHandRing3
+      position: {x: 0.00023741626, y: 0.022546176, z: 2.316898e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftHandIndex1
+      parentName: Soldier2:Bind_LeftHand
+      position: {x: 0.030896021, y: 0.06531225, z: -0.0011219991}
+      rotation: {x: -0.04597246, y: 0.007308775, z: -0.0924206, w: 0.99463135}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftHandIndex2
+      parentName: Soldier2:Bind_LeftHandIndex1
+      position: {x: -0.00070764805, y: 0.02531697, z: -4.6024958e-11}
+      rotation: {x: 0.000018239176, y: -0.0014570123, z: 0.01528256, w: 0.99988216}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftHandIndex3
+      parentName: Soldier2:Bind_LeftHandIndex2
+      position: {x: 0.000063628686, y: 0.023687592, z: 6.53098e-11}
+      rotation: {x: 0.000027903738, y: 0.0016977249, z: 0.0139016155, w: 0.99990195}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftHandIndex4
+      parentName: Soldier2:Bind_LeftHandIndex3
+      position: {x: 0.0006440228, y: 0.021093892, z: -1.4875784e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftHandPinky1
+      parentName: Soldier2:Bind_LeftHand
+      position: {x: -0.028547691, y: 0.056465883, z: -0.003313644}
+      rotation: {x: -0.04095696, y: 0.06839505, z: -0.08019205, w: 0.9935864}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftHandPinky2
+      parentName: Soldier2:Bind_LeftHandPinky1
+      position: {x: 0.000036528643, y: 0.021684296, z: 2.7467448e-11}
+      rotation: {x: -0.00000021679321, y: 0.000039462207, z: -0.00041669657, w: 0.99999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftHandPinky3
+      parentName: Soldier2:Bind_LeftHandPinky2
+      position: {x: 0.000023551831, y: 0.019774713, z: 8.0468514e-11}
+      rotation: {x: -0.00000036306727, y: -0.000052435884, z: -0.0021960153, w: 0.9999976}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftHandPinky4
+      parentName: Soldier2:Bind_LeftHandPinky3
+      position: {x: -0.00006007947, y: 0.0177475, z: 1.396227e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_Neck
+      parentName: Soldier2:Bind_Spine2
+      position: {x: -0, y: 0.12349392, z: -0.0000000059552785}
+      rotation: {x: 0.055067725, y: 0, z: -0, w: 0.99848264}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_Head
+      parentName: Soldier2:Bind_Neck
+      position: {x: -0, y: 0.03246574, z: 0.006492787}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_HeadTop_End
+      parentName: Soldier2:Bind_Head
+      position: {x: -0, y: 0.22822799, z: 0.04564305}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftUpLeg
+      parentName: Soldier2:Bind_Hips
+      position: {x: -0.09828411, y: -0.045512293, z: 0.0006588526}
+      rotation: {x: 0.1271522, y: -0.020619057, z: 0.97871965, w: 0.15973437}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftLeg
+      parentName: Soldier2:Bind_LeftUpLeg
+      position: {x: -0.12740791, y: 0.40100792, z: 0.023870539}
+      rotation: {x: -0.0064957337, y: 0.22215702, z: 0.15554929, w: 0.96250117}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:LeftLeg_IK_BakingLOC
+      parentName: Soldier2:Bind_LeftLeg
+      position: {x: -0.09179573, y: 0.006877912, z: 0.20717329}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftFoot
+      parentName: Soldier2:Bind_LeftLeg
+      position: {x: -0.000003455216, y: 0.42065433, z: 0.0000133792455}
+      rotation: {x: 0.49292052, y: -0.04354624, z: 0.026631687, w: 0.86857575}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:LeftFoot_IK_BakingLOC
+      parentName: Soldier2:Bind_LeftFoot
+      position: {x: -0.00000019744263, y: 0.00000056168705, z: -0.00000068328035}
+      rotation: {x: 0.010815727, y: 0.49658245, z: 0.86791, w: -0.0046030586}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftToeBase
+      parentName: Soldier2:Bind_LeftFoot
+      position: {x: -4.0187212e-10, y: 0.14053039, z: 2.746019e-10}
+      rotation: {x: 0.25613186, y: 0.0812401, z: -0.02160813, w: 0.9629796}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_LeftToe_End
+      parentName: Soldier2:Bind_LeftToeBase
+      position: {x: -0.0000000286418, y: 0.060270436, z: 0.00000016748173}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightUpLeg
+      parentName: Soldier2:Bind_Hips
+      position: {x: 0.09828411, y: -0.045512293, z: 0.00093886844}
+      rotation: {x: -0.12216489, y: -0.0016551474, z: 0.9889822, w: -0.08359007}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightLeg
+      parentName: Soldier2:Bind_RightUpLeg
+      position: {x: 0.06825363, y: 0.42250264, z: 0.012776975}
+      rotation: {x: -0.030884309, y: -0.052011434, z: -0.0783464, w: 0.99508935}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:RightLeg_IK_BakingLOC
+      parentName: Soldier2:Bind_RightLeg
+      position: {x: 0.04539559, y: -0.00068412913, z: 0.20747072}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightFoot
+      parentName: Soldier2:Bind_RightLeg
+      position: {x: -0.0000005317901, y: 0.42062476, z: -0.000008332972}
+      rotation: {x: 0.52371913, y: -0.10222687, z: 0.055145368, w: 0.8439354}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:RightFoot_IK_BakingLOC
+      parentName: Soldier2:Bind_RightFoot
+      position: {x: 0.0000004884535, y: 0.0000002289267, z: 0.000000008665126}
+      rotation: {x: -0.011715486, y: 0.49877405, z: 0.86663324, w: 0.0058364263}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightToeBase
+      parentName: Soldier2:Bind_RightFoot
+      position: {x: 0.0000000012146584, y: 0.1433649, z: 0.000000001992696}
+      rotation: {x: 0.2508257, y: -0.0873303, z: 0.022727013, w: 0.96381706}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Bind_RightToe_End
+      parentName: Soldier2:Bind_RightToeBase
+      position: {x: 0.0000000059404797, y: 0.06096154, z: 0.00000002713536}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Mesh_GRP
+      parentName: Soldier_3(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Mesh_helmet_low_headusOBJexport
+      parentName: Soldier2:Mesh_GRP
+      position: {x: -0.00035209654, y: 0.003450566, z: 0.014806222}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Soldier2:Mesh_sol_headusOBJexport
+      parentName: Soldier2:Mesh_GRP
+      position: {x: -0.00035209654, y: 0.003450566, z: 0.014806222}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 79be6a35c94617d448370aa362a6f8e9,
+    type: 3}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
