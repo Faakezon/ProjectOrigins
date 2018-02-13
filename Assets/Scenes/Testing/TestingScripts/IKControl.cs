@@ -40,7 +40,11 @@ public class IKControl : MonoBehaviour
     //a callback for calculating IK
     void OnAnimatorIK()
     {
+        IK_Handling();        
+    }
 
+    void IK_Handling()
+    {
         anim.SetIKPositionWeight(AvatarIKGoal.RightHand, rightHandWeight);
         anim.SetIKPositionWeight(AvatarIKGoal.LeftHand, leftHandWeight);
 
@@ -64,22 +68,19 @@ public class IKControl : MonoBehaviour
 
         float distanceFromPlayer = Vector3.Distance(lookPos, transform.position);
 
-        if(distanceFromPlayer > updateLookPosThreshold)
+        if (distanceFromPlayer > updateLookPosThreshold)
         {
             targetPos = lookPos;
         }
 
-        IK_lookPos = Vector3.Lerp(IK_lookPos, targetPos, Time.deltaTime * lerpRate);
+        IK_lookPos = Vector3.Slerp(IK_lookPos, targetPos, Time.deltaTime * lerpRate);
 
         anim.SetLookAtWeight(lookWeight, bodyWeight, headWeight, headWeight, clampWeight);
         anim.SetLookAtPosition(IK_lookPos);
 
-
-
-
     }
 
-    
+
 
 
 

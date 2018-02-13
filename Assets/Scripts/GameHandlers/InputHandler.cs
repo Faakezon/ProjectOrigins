@@ -55,13 +55,9 @@ public class InputHandler : MonoBehaviour {
     {
         if (Input.GetButtonDown("Start"))
         {
-            Debug.Log("START");
             GameStateHandler.SetNewGameState(GameStateHandler.GameState.CharacterScreen);
             MenuManager.instance.RunCharacterScreen();
-
         }
-
-       
     }
 
     void CharacterScreen()

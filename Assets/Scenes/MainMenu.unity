@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 357263320}
   - component: {fileID: 357263319}
   m_Layer: 5
-  m_Name: Particle System
+  m_Name: O-InOrigins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -521,7 +521,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1737254763
+  randomSeed: 2143537610
   InitialModule:
     serializedVersion: 3
     enabled: 1
