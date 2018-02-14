@@ -4,35 +4,33 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
-
+    //Static instance.
     public static PlayerMovement instance = null;
 
     //Public Variables
     public float MaxSpeed = 20;
     public bool AimAble = true;
 
-    //Input variables
-    private float horizontal;
-    private float vertical;
-    private float jumpInput;
-    private float rightHorizontal;
-    private float rightVertical;
+    //Private Variables
+    private bool inAir = false;
+    private bool jumpButtonPressed = false;
 
-    
-
+    //Private Components
     Rigidbody rigid;
     Animator anim;
 
+    //Helper
     public Transform shoulderTransform;
     public Transform rightShoulder;
     public Vector3 lookPos; //AimObj.position
     public Transform AimObj;
     GameObject rsp; //Right shoulder position helper.
-
     Transform spine;
 
+    //Direction
     Quaternion rightDir;
     Quaternion leftDir;
+
 
     void Awake () {
         spine = GameObject.Find("Spine").GetComponent<Transform>();
@@ -47,7 +45,7 @@ public class PlayerMovement : MonoBehaviour {
 
         rightDir = transform.rotation;
         leftDir = rightDir * Quaternion.Euler(0,180,0);
-
+        
     }
 
     void SetupSingleton()
@@ -63,8 +61,6 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     void Update () {
-
-        HandleInput();
         HandleMovement();
         HandleRotation();
         HandleAimingPos();
@@ -74,14 +70,9 @@ public class PlayerMovement : MonoBehaviour {
         Shoot(PlayerInput.instance.rightTrigger); //Here for now.
     }
 
-    private void HandleInput()
+    private void FixedUpdate()
     {
-        horizontal = PlayerInput.instance.horizontal;
-        vertical = PlayerInput.instance.vertical;
-        jumpInput = PlayerInput.instance.jumpInput;
-
-        rightHorizontal = PlayerInput.instance.rightHorizontal;
-        rightVertical = -PlayerInput.instance.rightVertical;
+        HandleJump();
     }
 
 
@@ -98,7 +89,7 @@ public class PlayerMovement : MonoBehaviour {
 
     private void HandleAnimations()
     {
-        float animValue = horizontal;
+        float animValue = PlayerInput.instance.horizontal;
 
         if (lookPos.x < transform.position.x)
         {
@@ -124,10 +115,10 @@ public class PlayerMovement : MonoBehaviour {
         Quaternion targetRotation = Quaternion.LookRotation(directionToLook);
         spine.transform.rotation = Quaternion.Slerp(spine.transform.rotation, targetRotation, Time.deltaTime * 15);
 
-        if(rightHorizontal > 0)
+        if(PlayerInput.instance.rightHorizontal > 0)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, rightDir, Time.deltaTime * 15);
-        }else if(rightHorizontal < 0)
+        }else if(PlayerInput.instance.rightHorizontal < 0)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, leftDir, Time.deltaTime * 15);
         }
@@ -135,10 +126,37 @@ public class PlayerMovement : MonoBehaviour {
 
     private void HandleMovement()
     {
-        Vector3 movement = new Vector3(horizontal, 0.0f, 0.0f);
-        transform.position += Vector3.right * movement.x * MaxSpeed * Time.deltaTime; //MaxSpeed == 5 works pretty well with anims.
+        Vector3 movement = new Vector3(PlayerInput.instance.horizontal, 0.0f, 0.0f);
+        rigid.MovePosition(rigid.position + (Vector3.right * movement.x * MaxSpeed * Time.deltaTime)); //MaxSpeed == 5 works pretty well with anims.
+
     }
 
+    private void HandleJump()
+    {
+        
+
+        //if(PlayerInput.instance.jumpInput != 0 && inAir == false)
+        //{
+        //    rigid.AddForce(Vector3.up * 2, ForceMode.Impulse);
+        //}
+
+
+        //RaycastHit hit;
+        //Debug.DrawLine(this.transform.position, -this.transform.up, Color.red);
+        //if (Physics.Raycast(this.transform.position, -this.transform.up, out hit, 15, LayerMask.NameToLayer("Ground")))
+        //{
+        //    Debug.Log("Jump");
+        //    inAir = true;
+        //}
+        //if (Vector3.Distance(transform.position, hit.point) < 0.15f)
+        //{
+        //    Debug.Log("Land");
+        //    inAir = false;
+        //    jumpButtonPressed = false;
+        //}
+        //anim.SetBool("inAir", inAir);
+
+    }
 
     private void SetupAnimator()
     {
@@ -159,8 +177,6 @@ public class PlayerMovement : MonoBehaviour {
             anim.SetBool("Shooting", true);
         }
     }
-
-
 
 }
 

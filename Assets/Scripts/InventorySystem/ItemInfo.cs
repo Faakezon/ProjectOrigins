@@ -125,7 +125,7 @@ public class ItemInfo : MonoBehaviour {
 
         if (vector.x < 0.5F)
         {
-            Debug.Log(vector + " Left Side");
+            //Debug.Log(vector + " Left Side");
 
             Vector3 addedPos = Camera.main.ScreenToViewportPoint(new Vector3(
                 inventory.transform.position.x + (itemInfo.GetComponent<RectTransform>().rect.width / divideBy),
@@ -136,7 +136,7 @@ public class ItemInfo : MonoBehaviour {
         }
         else
         {
-            Debug.Log(vector + " Right Side");
+            //Debug.Log(vector + " Right Side");
             Vector3 addedPos = Camera.main.ScreenToViewportPoint(new Vector3(
                 inventory.transform.position.x - (itemInfo.GetComponent<RectTransform>().rect.width / divideBy),
                 inventory.transform.position.y + (itemInfo.GetComponent<RectTransform>().rect.height / divideBy),
@@ -187,7 +187,7 @@ public class ItemInfo : MonoBehaviour {
 
         if (vector.x < 0.5F)
         {
-            Debug.Log(vector + " Left Side");
+            //Debug.Log(vector + " Left Side");
 
             Vector3 addedPos = Camera.main.ScreenToViewportPoint(new Vector3(
                 equipment.transform.position.x + (itemInfo.GetComponent<RectTransform>().rect.width / divideBy),
@@ -198,7 +198,7 @@ public class ItemInfo : MonoBehaviour {
         }
         else
         {
-            Debug.Log(vector + " Right Side");
+            //Debug.Log(vector + " Right Side");
             Vector3 addedPos = Camera.main.ScreenToViewportPoint(new Vector3(
                 equipment.transform.position.x - (itemInfo.GetComponent<RectTransform>().rect.width / divideBy),
                 equipment.transform.position.y + (itemInfo.GetComponent<RectTransform>().rect.height / divideBy),

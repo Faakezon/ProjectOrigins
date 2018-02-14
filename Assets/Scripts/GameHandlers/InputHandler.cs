@@ -82,6 +82,7 @@ public class InputHandler : MonoBehaviour {
 
     void PlanetController()
     {
+        Debug.Log("Planet");
         
         if (Input.GetButtonDown("Start"))
         {
@@ -90,10 +91,12 @@ public class InputHandler : MonoBehaviour {
         if (SceneHandler.instance.IsSceneActive("InventoryScreen"))
         {
             MainCameraRef.instance.SetReticuleActive(true);
+            PlayerInput.instance.UsePlayerInput = false;
         }
         else
         {
             MainCameraRef.instance.SetReticuleActive(false);
+            PlayerInput.instance.UsePlayerInput = true;
         }
     }
 

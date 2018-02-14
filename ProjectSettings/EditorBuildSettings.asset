@@ -20,3 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/InventoryScreen.unity
     guid: be99c3dad96af584eb6a73a1a9e542a6
+  - enabled: 1
+    path: Assets/Scenes/Testing/Testing_Player.unity
+    guid: e9c1554966bb1ff41893c8151a81ba44

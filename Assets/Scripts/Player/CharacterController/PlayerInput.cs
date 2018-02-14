@@ -7,6 +7,8 @@ public class PlayerInput : MonoBehaviour
 {
     public static PlayerInput instance = null;
 
+    public bool UsePlayerInput = true;
+
     //Axis
     public float horizontal;
     public float vertical;
@@ -32,24 +34,29 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
-        //Update is for buttons.
-        jumpInput = Input.GetAxis("XboxY");
+        if (UsePlayerInput)
+        {
+            //Update is for buttons.
+            jumpInput = Input.GetAxis("XboxY");
+        }
     }
     
 
     void FixedUpdate()
-    {   
-        //FixedUpdate is for axis.
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
+    {
+        if (UsePlayerInput)
+        {
+            //FixedUpdate is for axis.
+            horizontal = Input.GetAxis("Horizontal");
+            vertical = Input.GetAxis("Vertical");
 
-        rightHorizontal = Input.GetAxis("RightStickHorizontal");
-        rightVertical = -Input.GetAxis("RightStickVertical");
+            rightHorizontal = Input.GetAxis("RightStickHorizontal");
+            rightVertical = -Input.GetAxis("RightStickVertical");
 
-        rightTrigger = Input.GetAxis("RightTrigger");
+            rightTrigger = Input.GetAxis("RightTrigger");
 
 
-
+        }
     }
 }
 

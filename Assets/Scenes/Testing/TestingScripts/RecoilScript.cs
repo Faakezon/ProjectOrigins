@@ -72,7 +72,7 @@ public class RecoilScript : MonoBehaviour {
     {
         Debug.Log("FireparticlesBeforeTrue");
         allowFire = false;
-        Instantiate(Bullet, ps.gameObject.transform.position, ps.gameObject.transform.rotation);
+        Instantiate(Bullet, ps.transform.gameObject.transform.position, ps.transform.gameObject.transform.rotation);
         ps.Play();
         yield return new WaitForSeconds(1 / (RPM / 60));
         allowFire = true;

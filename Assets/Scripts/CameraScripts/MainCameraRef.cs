@@ -38,10 +38,10 @@ public class MainCameraRef : MonoBehaviour {
         switch (GameStateHandler.currentGameState)  
         {
             case GameStateHandler.GameState.MainMenu:
-                
-                    break;
+                SetReticuleInactive();
+                break;
             case GameStateHandler.GameState.CharacterScreen:
-                
+                SetReticuleActive();
                 break;
             case GameStateHandler.GameState.PlanetExplorer:
                 this.transform.position = new Vector3(0, 0, -10);
@@ -49,7 +49,7 @@ public class MainCameraRef : MonoBehaviour {
                 //ppb.profile = ppbProfile[1];
                 break;
             case GameStateHandler.GameState.Planet:
-                
+
                 break;
             default:
                 break;

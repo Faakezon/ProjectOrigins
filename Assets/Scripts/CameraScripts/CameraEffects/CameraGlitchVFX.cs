@@ -37,7 +37,7 @@ public class CameraGlitchVFX : MonoBehaviour
                 ResizeGlitchEffect();
                 break;
             case GameStateHandler.GameState.PlanetExplorer:
-                CameraGlitchVFX.instance.glitch.scanLineJitter = 0.05f;
+                CameraGlitchVFX.instance.glitch.scanLineJitter = 0.01f;
                 CameraGlitchVFX.instance.glitch.colorDrift = 0.0f;
                 break;
             case GameStateHandler.GameState.Planet:
@@ -61,21 +61,21 @@ public class CameraGlitchVFX : MonoBehaviour
 
     public void ResizeGlitchEffect()
     {
-        if (CameraGlitchVFX.instance.glitch.scanLineJitter > 0.3)
+        if (CameraGlitchVFX.instance.glitch.scanLineJitter > 0)
         {
             CameraGlitchVFX.instance.glitch.scanLineJitter -= 0.3f * Time.deltaTime;
         }
         else
         {
-            CameraGlitchVFX.instance.glitch.scanLineJitter = 0.3f;
+            CameraGlitchVFX.instance.glitch.scanLineJitter = 0f;
         }
-        if (CameraGlitchVFX.instance.glitch.colorDrift > 0.05)
+        if (CameraGlitchVFX.instance.glitch.colorDrift > 0)
         {
             CameraGlitchVFX.instance.glitch.colorDrift -= 0.3f * Time.deltaTime;
         }
         else
         {
-            CameraGlitchVFX.instance.glitch.colorDrift = 0.05f;
+            CameraGlitchVFX.instance.glitch.colorDrift = 0;
         }
     }
     public void StopGlitchEffect()

@@ -38,18 +38,20 @@ public class PlanetSelector : MonoBehaviour {
             if (Input.GetMouseButtonDown(0))
             {
                 SceneHandler.instance.LoadScene(PlanetInfoBox_Name.text);
+                GameStateHandler.SetNewGameState(GameStateHandler.GameState.Planet);
             }
             if (Input.GetButtonDown("XboxA"))
             {
                 Debug.Log("SelectedPlanet: " + PlanetInfoBox_Name.text);
                 SceneHandler.instance.LoadScene(PlanetInfoBox_Name.text);
+                GameStateHandler.SetNewGameState(GameStateHandler.GameState.Planet);
             }
         }
     }
 
     public void Set_PlanetInfo(string name, int levelRequirement)
     {
-        Debug.Log(name + " " + levelRequirement);
+        //Debug.Log(name + " " + levelRequirement);
         PlanetInfoBox.SetActive(true);
         PlanetInfoBox_Name.text = name;
         PlanetInfoBox_LevelReq.text = levelRequirement.ToString();
