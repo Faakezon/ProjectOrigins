@@ -12,12 +12,14 @@ public class PlayerMovement : MonoBehaviour {
     public bool AimAble = true;
 
     //Private Variables
-    private bool inAir = false;
+    private bool isLanding;
+    private bool isGrounded = true;
     private bool jumpButtonPressed = false;
 
     //Private Components
     Rigidbody rigid;
     Animator anim;
+    CapsuleCollider capCol;
 
     //Helper
     public Transform shoulderTransform;
@@ -38,6 +40,7 @@ public class PlayerMovement : MonoBehaviour {
 
 
         rigid = GetComponent<Rigidbody>();
+        capCol = GetComponent<CapsuleCollider>();
         SetupAnimator();
 
         rsp = new GameObject();
@@ -72,6 +75,8 @@ public class PlayerMovement : MonoBehaviour {
 
     private void FixedUpdate()
     {
+        anim.SetFloat("XVel1", Mathf.Abs(rigid.velocity.x + 1));
+        isLanding = IsLanding();
         HandleJump();
     }
 
@@ -127,36 +132,65 @@ public class PlayerMovement : MonoBehaviour {
     private void HandleMovement()
     {
         Vector3 movement = new Vector3(PlayerInput.instance.horizontal, 0.0f, 0.0f);
-        rigid.MovePosition(rigid.position + (Vector3.right * movement.x * MaxSpeed * Time.deltaTime)); //MaxSpeed == 5 works pretty well with anims.
-
+        //rigid.MovePosition(rigid.position + (Vector3.right * movement.x * MaxSpeed * Time.deltaTime)); //MaxSpeed == 5 works pretty well with anims.
+        rigid.velocity = new Vector2(movement.x * MaxSpeed, rigid.velocity.y);
     }
 
     private void HandleJump()
     {
         
+        if(isGrounded && PlayerInput.instance.jumpInput == 1)
+        {
+            anim.SetTrigger("Jump");
+        }
+        anim.SetBool("isGrounded", isGrounded);
+        anim.SetBool("isLanding", IsLanding());
 
         //if(PlayerInput.instance.jumpInput != 0 && inAir == false)
         //{
         //    rigid.AddForce(Vector3.up * 2, ForceMode.Impulse);
         //}
 
-
-        //RaycastHit hit;
-        //Debug.DrawLine(this.transform.position, -this.transform.up, Color.red);
-        //if (Physics.Raycast(this.transform.position, -this.transform.up, out hit, 15, LayerMask.NameToLayer("Ground")))
-        //{
-        //    Debug.Log("Jump");
-        //    inAir = true;
-        //}
-        //if (Vector3.Distance(transform.position, hit.point) < 0.15f)
-        //{
-        //    Debug.Log("Land");
-        //    inAir = false;
-        //    jumpButtonPressed = false;
-        //}
-        //anim.SetBool("inAir", inAir);
-
     }
+
+    private bool IsLanding()
+    {
+        if (isGrounded && !isLanding)
+            return false;
+
+
+        Ray ray = new Ray(this.capCol.transform.position, Vector3.down);
+        RaycastHit hit;
+
+        //Debug.Log(rigid.velocity.y + Physics.gravity.y);
+        
+        if (Physics.Raycast(ray, out hit, 15))
+        {
+            isLanding = false;
+        }
+        if (Vector3.Distance(this.capCol.transform.position, hit.point) < 1.1f && (rigid.velocity.y + Physics.gravity.y) <= -9.81f)
+        {
+            //anim.ResetTrigger("Jump");
+            isLanding = true;
+        }
+        Debug.DrawRay(ray.origin, ray.direction, Color.red);
+        return isLanding;
+    }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.transform.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            Debug.Log("LANDED");
+            anim.ResetTrigger("Jump");
+            isGrounded = true;
+            isLanding = false;
+            anim.SetBool("isGrounded", isGrounded);
+            anim.SetBool("isLanding", isLanding);
+        }
+    }
+
 
     private void SetupAnimator()
     {
@@ -176,6 +210,17 @@ public class PlayerMovement : MonoBehaviour {
             RecoilScript.instance.shake = 1.0f;
             anim.SetBool("Shooting", true);
         }
+    }
+
+
+    public void JumpAniLeaveGround()
+    {
+        Debug.Log("JumpAniLeaveGround");
+        isGrounded = false;
+        isLanding = false;
+        rigid.AddForce(Vector3.up * 5, ForceMode.Impulse);
+        anim.SetBool("isGrounded", isGrounded);
+        anim.SetBool("isLanding", isLanding);
     }
 
 }

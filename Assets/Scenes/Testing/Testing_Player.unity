@@ -7043,7 +7043,7 @@ GameObject:
   - component: {fileID: 1074766694}
   - component: {fileID: 1074766693}
   - component: {fileID: 1074766692}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
