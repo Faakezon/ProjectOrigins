@@ -5460,16 +5460,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lerpRate: 15
   updateLookPosThreshold: 2
-  lookWeight: 1.15
-  bodyWeight: 0.2
-  headWeight: 0.22
+  lookWeight: 1
+  bodyWeight: 0.9
+  headWeight: 1
   clampWeight: 1
   rightHandWeight: 1
   leftHandWeight: 1
-  rightHandTarget: {fileID: 2086009779}
-  rightElbowTarget: {fileID: 1455394935}
-  leftHandTarget: {fileID: 1195803990}
-  leftElbowTarget: {fileID: 867610304}
 --- !u!114 &539286467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6441,7 +6437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 867610304}
   m_Layer: 8
-  m_Name: LeftElbow
+  m_Name: LeftElbowTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7775,7 +7771,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1455394935}
   m_Layer: 8
-  m_Name: RightElbow
+  m_Name: RightElbowTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9095,6 +9091,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2074490538}
+  - component: {fileID: 2074490540}
   m_Layer: 8
   m_Name: MocapGuy_HiRes_Meshes
   m_TagString: Untagged
@@ -9122,6 +9119,23 @@ Transform:
   m_Father: {fileID: 539286471}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2074490540
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2074490537}
+  m_Enabled: 0
+  m_Avatar: {fileID: 9000000, guid: 0c79255a8962ed04590e6d287ba80954, type: 3}
+  m_Controller: {fileID: 9100000, guid: 2676a575a0e1195439c28bdc13726ced, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &2075356609
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class IKControl : MonoBehaviour
 {
 
     Animator anim;
-    Vector3 lookPos;
+    private Vector3 AimObj;
     Vector3 IK_lookPos;
     Vector3 targetPos;
 
@@ -25,16 +25,23 @@ public class IKControl : MonoBehaviour
     public float rightHandWeight = 1;
     public float leftHandWeight = 1;
 
-    public Transform rightHandTarget;
-    public Transform rightElbowTarget;
-    public Transform leftHandTarget;
-    public Transform leftElbowTarget;
+    private Transform rightHandTarget;
+    private Transform rightElbowTarget;
+    private Transform leftHandTarget;
+    private Transform leftElbowTarget;
 
 
     void Start()
     {
         anim = GetComponent<Animator>();
         pm = GetComponent<PlayerMovement>();
+
+        AimObj = GameObject.Find("AimObj").transform.position;
+
+        rightHandTarget = GameObject.Find("RightHandTarget").transform;
+        rightElbowTarget = GameObject.Find("RightElbowTarget").transform;
+        leftHandTarget = GameObject.Find("LeftHandTarget").transform;
+        leftElbowTarget = GameObject.Find("LeftElbowTarget").transform;
     }
 
     //a callback for calculating IK
@@ -63,14 +70,14 @@ public class IKControl : MonoBehaviour
         anim.SetIKHintPosition(AvatarIKHint.RightElbow, rightElbowTarget.position);
         anim.SetIKHintPosition(AvatarIKHint.LeftElbow, leftElbowTarget.position);
 
-        this.lookPos = pm.lookPos;
-        lookPos.z = transform.position.z;
+        //this.lookPos = pm.lookPos;
+        //lookPos.z = transform.position.z;
 
-        float distanceFromPlayer = Vector3.Distance(lookPos, transform.position);
+        float distanceFromPlayer = Vector3.Distance(AimObj, transform.position);
 
         if (distanceFromPlayer > updateLookPosThreshold)
         {
-            targetPos = lookPos;
+            targetPos = AimObj;
         }
 
         IK_lookPos = Vector3.Slerp(IK_lookPos, targetPos, Time.deltaTime * lerpRate);
