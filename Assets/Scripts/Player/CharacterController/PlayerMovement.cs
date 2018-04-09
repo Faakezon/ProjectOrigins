@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
-    //Static instance.
-    public static PlayerMovement instance = null;
 
     //Public Variables
     public float MaxSpeed = 20;
@@ -36,8 +34,6 @@ public class PlayerMovement : MonoBehaviour {
 
     void Awake () {
         spine = GameObject.Find("Spine").GetComponent<Transform>();
-        SetupSingleton();
-
 
         rigid = GetComponent<Rigidbody>();
         capCol = GetComponent<CapsuleCollider>();
@@ -51,23 +47,12 @@ public class PlayerMovement : MonoBehaviour {
         
     }
 
-    void SetupSingleton()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else if (instance != this)
-        {
-            Destroy(gameObject);
-        }
-    }
 
     void Update () {
         HandleMovement();
         HandleRotation();
         HandleAimingPos();
-        HandleAnimations();
+        HandleMovementAnimation();
         HandleShoulder();
 
         Shoot(PlayerInput.instance.rightTrigger); //Here for now.
@@ -76,8 +61,10 @@ public class PlayerMovement : MonoBehaviour {
     private void FixedUpdate()
     {
         anim.SetFloat("XVel1", Mathf.Abs(rigid.velocity.x + 1));
-        isLanding = IsLanding();
+        //isLanding = IsLanding();
         HandleJump();
+        if(!anim.GetBool("isGrounded"))
+            SetIsLanding(IsLanding());
     }
 
 
@@ -92,7 +79,7 @@ public class PlayerMovement : MonoBehaviour {
         shoulderTransform.position = rsp.transform.position;
     }
 
-    private void HandleAnimations()
+    private void HandleMovementAnimation()
     {
         float animValue = PlayerInput.instance.horizontal;
 
@@ -138,92 +125,100 @@ public class PlayerMovement : MonoBehaviour {
 
     private void HandleJump()
     {
-        
         if(isGrounded && PlayerInput.instance.jumpInput == 1)
         {
-            anim.SetTrigger("Jump");
+            TriggerJump();
         }
-        anim.SetBool("isGrounded", isGrounded);
-        anim.SetBool("isLanding", IsLanding());
-
-        //if(PlayerInput.instance.jumpInput != 0 && inAir == false)
-        //{
-        //    rigid.AddForce(Vector3.up * 2, ForceMode.Impulse);
-        //}
-
     }
+
+
 
     private bool IsLanding()
     {
-        if (isGrounded && !isLanding)
-            return false;
-
-
         Ray ray = new Ray(this.capCol.transform.position, Vector3.down);
         RaycastHit hit;
 
         //Debug.Log(rigid.velocity.y + Physics.gravity.y);
-        
+
         if (Physics.Raycast(ray, out hit, 15))
         {
-            isLanding = false;
+            Debug.DrawRay(ray.origin, ray.direction, Color.red);
         }
         if (Vector3.Distance(this.capCol.transform.position, hit.point) < 1.1f && (rigid.velocity.y + Physics.gravity.y) <= -9.81f)
         {
-            //anim.ResetTrigger("Jump");
-            isLanding = true;
+            return true;
         }
-        Debug.DrawRay(ray.origin, ray.direction, Color.red);
-        return isLanding;
+        else return false;
+        
+        
     }
 
 
     private void OnCollisionEnter(Collision collision)
     {
+        // If the player collides with the ground layer, the player has landed (set to false) and is grounded (set to true).
         if(collision.collider.transform.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
-            Debug.Log("LANDED");
-            anim.ResetTrigger("Jump");
-            isGrounded = true;
-            isLanding = false;
-            anim.SetBool("isGrounded", isGrounded);
-            anim.SetBool("isLanding", isLanding);
+            //Debug.Log("LANDED");
+            ResetJumpTrigger();
+            SetIsGrounded(true);
+            SetIsLanding(false);
         }
     }
 
-
-    private void SetupAnimator()
-    {
-        anim = GetComponent<Animator>();
-    }
 
 
     private void Shoot(float triggerInput) //Here for now.
     {
         if(triggerInput <= 0)
         {
-            anim.SetBool("Shooting", false);
+            SetIsShooting(false);
             return;
         }
         else
         {
-            Debug.Log("FIRE!!");
             RecoilScript.instance.shake = 1.0f;
-            anim.SetBool("Shooting", true);
+            SetIsShooting(true);
         }
     }
-
 
     public void JumpAniLeaveGround()
     {
         Debug.Log("JumpAniLeaveGround");
-        isGrounded = false;
-        isLanding = false;
         rigid.AddForce(Vector3.up * 5, ForceMode.Impulse);
-        anim.SetBool("isGrounded", isGrounded);
-        anim.SetBool("isLanding", isLanding);
+        SetIsGrounded(false);
+        SetIsLanding(false);
     }
 
+    private void SetupAnimator()
+    {
+        anim = GetComponent<Animator>();
+    }
+
+    private void SetIsLanding(bool landing)
+    {
+        anim.SetBool("isLanding", landing);
+    }
+
+    private void SetIsGrounded(bool grounded)
+    {
+        anim.SetBool("isGrounded", grounded);
+    }
+
+    private void SetIsShooting(bool shooting)
+    {
+        anim.SetBool("Shooting", shooting);
+    }
+
+    private void TriggerJump()
+    {
+        anim.SetTrigger("Jump");
+    }
+
+    private void ResetJumpTrigger()
+    {
+        anim.ResetTrigger("Jump");
+    }
 }
 
 

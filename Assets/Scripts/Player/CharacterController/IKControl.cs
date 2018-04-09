@@ -7,16 +7,13 @@ using UnityEngine;
 
 public class IKControl : MonoBehaviour
 {
-
     Animator anim;
-    private Vector3 AimObj;
+    private Transform AimObj;
     Vector3 IK_lookPos;
     Vector3 targetPos;
 
-    PlayerMovement pm;
-
     public float lerpRate = 15;
-    public float updateLookPosThreshold = 2;
+    
     public float lookWeight = 1;
     public float bodyWeight = .9f;
     public float headWeight = 1;
@@ -25,33 +22,44 @@ public class IKControl : MonoBehaviour
     public float rightHandWeight = 1;
     public float leftHandWeight = 1;
 
-    private Transform rightHandTarget;
-    private Transform rightElbowTarget;
-    private Transform leftHandTarget;
-    private Transform leftElbowTarget;
+    private Transform rightHandTarget, rightHand;
+    private Transform rightElbowTarget, rightElbow;
+    private Transform leftHandTarget, leftHand;
+    private Transform leftElbowTarget, leftElbow;
 
 
     void Start()
     {
         anim = GetComponent<Animator>();
-        pm = GetComponent<PlayerMovement>();
+        
 
-        AimObj = GameObject.Find("AimObj").transform.position;
+        AimObj = GameObject.Find("AimObj").transform;
 
-        rightHandTarget = GameObject.Find("RightHandTarget").transform;
-        rightElbowTarget = GameObject.Find("RightElbowTarget").transform;
-        leftHandTarget = GameObject.Find("LeftHandTarget").transform;
-        leftElbowTarget = GameObject.Find("LeftElbowTarget").transform;
+        rightHand = GameObject.Find("RightHandTarget").transform;
+        rightElbow = GameObject.Find("RightElbowTarget").transform;
+        leftHand = GameObject.Find("LeftHandTarget").transform;
+        leftElbow = GameObject.Find("LeftElbowTarget").transform;
+    }
+
+    private void Update()
+    {
+        targetPos = AimObj.position;
+        rightHandTarget = rightHand;
+        rightElbowTarget = rightElbow;
+        leftHandTarget = leftHand;
+        leftElbowTarget = leftElbow;
     }
 
     //a callback for calculating IK
     void OnAnimatorIK()
     {
-        IK_Handling();        
+        IK_Handling();
+        
     }
 
     void IK_Handling()
     {
+
         anim.SetIKPositionWeight(AvatarIKGoal.RightHand, rightHandWeight);
         anim.SetIKPositionWeight(AvatarIKGoal.LeftHand, leftHandWeight);
 
@@ -70,20 +78,13 @@ public class IKControl : MonoBehaviour
         anim.SetIKHintPosition(AvatarIKHint.RightElbow, rightElbowTarget.position);
         anim.SetIKHintPosition(AvatarIKHint.LeftElbow, leftElbowTarget.position);
 
-        //this.lookPos = pm.lookPos;
-        //lookPos.z = transform.position.z;
-
-        float distanceFromPlayer = Vector3.Distance(AimObj, transform.position);
-
-        if (distanceFromPlayer > updateLookPosThreshold)
-        {
-            targetPos = AimObj;
-        }
 
         IK_lookPos = Vector3.Slerp(IK_lookPos, targetPos, Time.deltaTime * lerpRate);
 
         anim.SetLookAtWeight(lookWeight, bodyWeight, headWeight, headWeight, clampWeight);
         anim.SetLookAtPosition(targetPos);
+        
+        
 
     }
 
