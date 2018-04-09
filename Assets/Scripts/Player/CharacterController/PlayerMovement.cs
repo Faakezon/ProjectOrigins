@@ -207,6 +207,7 @@ public class PlayerMovement : MonoBehaviour {
         }
         else
         {
+            Debug.Log("FIRE!!");
             RecoilScript.instance.shake = 1.0f;
             anim.SetBool("Shooting", true);
         }

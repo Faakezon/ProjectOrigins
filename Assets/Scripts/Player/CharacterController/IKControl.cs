@@ -83,7 +83,7 @@ public class IKControl : MonoBehaviour
         IK_lookPos = Vector3.Slerp(IK_lookPos, targetPos, Time.deltaTime * lerpRate);
 
         anim.SetLookAtWeight(lookWeight, bodyWeight, headWeight, headWeight, clampWeight);
-        anim.SetLookAtPosition(IK_lookPos);
+        anim.SetLookAtPosition(targetPos);
 
     }
 
